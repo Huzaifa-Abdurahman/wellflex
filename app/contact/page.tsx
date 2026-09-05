@@ -1,0 +1,61 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { PageShell } from "../components";
+import { siteConfig } from "../site-config";
+import { ContactForm } from "./contact-form";
+
+export const metadata: Metadata = {
+  title: "Contact & Appointments | Flex Well Islamabad",
+  description: "Call, WhatsApp or send an appointment enquiry to Flex Well Physiotherapy and Hijama Center in DHA Phase 2, Islamabad.",
+};
+
+const address = siteConfig.address;
+const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+
+function ContactIcon({ type }: { type: "phone" | "whatsapp" | "email" | "location" }) {
+  if (type === "phone") return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3H4.5A1.5 1.5 0 0 0 3 4.5C3 13.6 10.4 21 19.5 21a1.5 1.5 0 0 0 1.5-1.5V17l-5-1-1.2 2a15 15 0 0 1-8.8-8.8L8 8 7 3Z" /></svg>;
+  if (type === "whatsapp") return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.6Z"/><path d="M9 8c.4 3 2 4.7 5 5.5l1-1.3 2 .9c-.2 1.3-1 2-2.3 2-3.7-.3-6.5-3-7.2-6.5C7.3 7.5 8 7 9 8Z"/></svg>;
+  if (type === "email") return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>;
+  return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>;
+}
+
+function ArrowIcon() {
+  return <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4" /></svg>;
+}
+
+export default function ContactPage() {
+  return <PageShell><main className="contact-page">
+    <section className="contact-hero">
+      <div><p className="section-label">Contact Flex Well</p><h1>Let&apos;s plan your next step.</h1></div>
+      <p>Whether you are ready to book or simply need guidance, our clinic team is here to help you find the right place to begin.</p>
+    </section>
+
+    <section className="contact-layout">
+      <div className="contact-info-column"><div className="contact-details">
+        <div className="contact-card contact-card-featured">
+          <ContactIcon type="whatsapp" />
+          <div><p>Fastest response</p><h2>Chat on WhatsApp</h2><span>Ask about availability, services or your first appointment.</span><a href={siteConfig.whatsapp} target="_blank" rel="noreferrer">Start a conversation <ArrowIcon /></a></div>
+        </div>
+        <div className="contact-card">
+          <ContactIcon type="phone" />
+          <div><p>Call the clinic</p><h2>{siteConfig.phoneDisplay}</h2><span>Speak directly with our team during clinic hours.</span><a href={siteConfig.phoneHref}>Call now <ArrowIcon /></a></div>
+        </div>
+        <div className="contact-card">
+          <ContactIcon type="email" />
+          <div><p>Email</p><h2>{siteConfig.email}</h2><span>For non-urgent questions and general enquiries.</span><a href={`mailto:${siteConfig.email}`}>Send an email <ArrowIcon /></a></div>
+        </div>
+        <div className="contact-card">
+          <ContactIcon type="location" />
+          <div><p>Visit us</p><h2>{address}</h2><span>DHA Phase II, Islamabad.</span><a href={directionsUrl} target="_blank" rel="noreferrer">Get directions <ArrowIcon /></a></div>
+        </div>
+      </div>
+      <div className="contact-socials"><p>Follow Flex Well</p><div><a href={siteConfig.social.instagram} target="_blank" rel="noreferrer">Instagram <ArrowIcon /></a><a href={siteConfig.social.facebook} target="_blank" rel="noreferrer">Facebook <ArrowIcon /></a></div></div></div>
+      <ContactForm />
+    </section>
+
+    <section className="map-section">
+      <div className="map-heading"><div><p className="section-label">Find the clinic</p><h2>Conveniently located in DHA Phase II.</h2></div><Link className="text-link" href={directionsUrl} target="_blank" rel="noreferrer">Open in Google Maps <ArrowIcon /></Link></div>
+      <div className="map-frame"><iframe title="Google map showing Flex Well clinic location in DHA Phase II, Islamabad" src="https://www.google.com/maps?q=Street%2019%2C%20Sector%20J%2C%20DHA%20Phase%20II%2C%20Islamabad%2C%20Pakistan&output=embed" loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade" /></div>
+    </section>
+  </main></PageShell>;
+}
