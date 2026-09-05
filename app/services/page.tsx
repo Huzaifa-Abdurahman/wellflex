@@ -3,6 +3,12 @@ import Link from "next/link";
 import { PageShell } from "../components";
 import { services } from "./data";
 
+const hijamaServiceSlugs = new Set(["hijama-therapy", "wet-hijama", "dry-cupping", "sunnah-hijama"]);
+const serviceGroups = [
+  { label: "Physiotherapy & rehabilitation", title: "Movement care for every stage of life.", items: services.filter((service) => !hijamaServiceSlugs.has(service.slug)) },
+  { label: "Hijama & cupping", title: "Traditional wellness care, clearly explained.", items: services.filter((service) => hijamaServiceSlugs.has(service.slug)) },
+];
+
 function ArrowIcon() {
   return <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4" /></svg>;
 }
@@ -17,19 +23,29 @@ export default function ServicesPage() {
       <p>From pain relief and rehabilitation to traditional Hijama care, every service begins with a conversation and a plan tailored to you.</p>
     </section>
 
-    <section className="services-grid" aria-label="Flex Well treatments">
-      {services.map((service, index) => <article className="service-card" key={service.slug}>
-        <Link className="service-image" href={`/services/${service.slug}`} aria-label={`Learn more about ${service.title}`}>
-          <Image src={service.image} alt={service.imageAlt} fill sizes="(max-width: 700px) 34vw, (max-width: 1050px) 50vw, 33vw" priority={index < 3} />
-        </Link>
-        <div className="service-card-copy">
-          <p className="service-number">0{index + 1}</p>
-          <h2><Link href={`/services/${service.slug}`}>{service.title}</Link></h2>
-          <p>{service.description}</p>
-          <Link className="service-link" href={`/services/${service.slug}`}>Learn more <ArrowIcon /></Link>
-        </div>
-      </article>)}
+    <section className="home-service-banner">
+      <div className="home-service-banner-image"><Image src="/rehabillation.jfif" alt="Physiotherapist supporting a patient during rehabilitation" fill sizes="(max-width: 700px) 100vw, 40vw" /></div>
+      <div><p className="section-label">Care at your doorstep</p><h2>Home physiotherapy across Islamabad &amp; Rawalpindi.</h2><p>Personalised assessment and rehabilitation for people who find travelling to the clinic difficult.</p><Link className="button button-primary" href="/home-physiotherapy">Explore home visits <ArrowIcon /></Link></div>
     </section>
+
+    {serviceGroups.map((group) => <section className="service-group" key={group.label}>
+      <div className="service-group-heading"><p className="section-label">{group.label}</p><h2>{group.title}</h2></div>
+      <div className="services-grid" aria-label={group.label}>
+        {group.items.map((service, index) => <article className="service-card" key={service.slug}>
+          <Link className="service-image" href={`/services/${service.slug}`} aria-label={`Learn more about ${service.title}`}>
+            <Image src={service.image} alt={service.imageAlt} fill sizes="(max-width: 700px) 34vw, (max-width: 1050px) 50vw, 33vw" priority={group.label.startsWith("Physiotherapy") && index < 3} />
+          </Link>
+          <div className="service-card-copy">
+            <p className="service-number">{String(index + 1).padStart(2, "0")}</p>
+            <h2><Link href={`/services/${service.slug}`}>{service.title}</Link></h2>
+            <p>{service.description}</p>
+            <Link className="service-link" href={`/services/${service.slug}`}>Learn more <ArrowIcon /></Link>
+          </div>
+        </article>)}
+      </div>
+    </section>)}
+
+    <section className="women-care-banner"><div><p className="section-label">Care for women</p><h2>Female physiotherapy &amp; Hijama appointments.</h2><p>Respectful, private care with female-practitioner availability confirmed when you book.</p></div><Link className="button button-light" href="/women-care">Explore women&apos;s care <ArrowIcon /></Link></section>
 
     <section className="services-cta">
       <div><p className="section-label">Not sure where to start?</p><h2>Tell us what is holding you back.</h2></div>

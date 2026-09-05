@@ -47,6 +47,8 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       <div className="service-detail-image"><Image src={service.image} alt={service.imageAlt} fill priority sizes="(max-width: 800px) 100vw, 52vw" /></div>
     </section>
 
+    {["hijama-therapy", "wet-hijama", "dry-cupping", "sunnah-hijama"].includes(service.slug) && <aside className="hijama-safety-link"><div><span>Safety first</span><h2>Read our Hijama Safety &amp; Hygiene Protocol</h2><p>Learn how consultation, screening, single-use supplies, hygiene and aftercare shape a responsible treatment experience.</p></div><Link className="button button-light" href="/hijama-safety">View safety protocol <ArrowIcon /></Link></aside>}
+
     <section className="service-overview">
       <div className="service-prose">
         <p className="section-label">About this service</p>

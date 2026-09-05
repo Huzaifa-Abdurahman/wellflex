@@ -29,7 +29,7 @@ function ArrowIcon() {
 
 export default function AboutPage() {
   return <PageShell><main className="about-page">
-    <section className="about-hero">
+    <section className="about-hero" id="about-flex-well">
       <div className="about-image">
         <Image src="/about.jfif" alt="Bright and welcoming Flex Well therapy room" fill priority sizes="(max-width: 800px) 100vw, 55vw" />
         <span>Our space in DHA Phase 2</span>
@@ -41,13 +41,13 @@ export default function AboutPage() {
         <p>At Flex Well Physiotherapy &amp; Hijama Center, we are dedicated to providing expert, compassionate care that helps you heal, move and thrive.</p>
         <p>Our goal is to improve your quality of life through personalised treatment, clear guidance and a thoughtful approach to whole-person wellbeing.</p>
 
-        <div className="about-values">
+        <div className="about-values" id="why-choose">
           {values.map((value) => <article key={value.title}><ValueIcon type={value.icon} /><div><h2>{value.title}</h2><p>{value.text}</p></div></article>)}
         </div>
       </div>
     </section>
 
-    <section className="about-principles">
+    <section className="about-principles" id="mission">
       <div><p className="section-label">How we care</p><h2>Professional treatment should feel personal.</h2></div>
       <div className="principle-grid">
         <article><span>01</span><h3>We listen first</h3><p>Your concerns, daily routine and goals guide the direction of care from the first conversation.</p></article>

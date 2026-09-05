@@ -9,10 +9,39 @@ import { getBookingWhatsAppUrl, siteConfig } from "./site-config";
 const navigation = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
+  { label: "Home Visits", href: "/home-physiotherapy" },
   { label: "Treatments", href: "/treatments" },
   { label: "Therapists", href: "/therapists" },
   { label: "About us", href: "/about" },
   { label: "Contact", href: "/contact" },
+];
+
+const drawerSections = [
+  { title: "Main pages", marker: "01", links: [
+    { label: "Home", href: "/" }, { label: "About Flex Well", href: "/about#about-flex-well" },
+    { label: "Our mission", href: "/about#mission" }, { label: "Why choose us", href: "/about#why-choose" },
+    { label: "Our team", href: "/therapists" }, { label: "Contact", href: "/contact" },
+  ] },
+  { title: "Physiotherapy", marker: "02", links: [
+    { label: "Physiotherapy", href: "/services/physiotherapy" }, { label: "Orthopaedic", href: "/services/orthopaedic-physiotherapy" },
+    { label: "Neurological", href: "/services/neurological-physiotherapy" }, { label: "Sports rehabilitation", href: "/treatments/sports-injuries" },
+    { label: "Paediatric", href: "/services/paediatric-physiotherapy" }, { label: "Older adult care", href: "/services/older-adult-physiotherapy" },
+    { label: "Post-surgical", href: "/services/post-surgical-physiotherapy" }, { label: "Manual therapy", href: "/services/manual-therapy" },
+    { label: "Exercise therapy", href: "/services/exercise-therapy" }, { label: "Dry needling", href: "/services/dry-needling" },
+    { label: "Home physiotherapy", href: "/home-physiotherapy" },
+  ] },
+  { title: "Hijama", marker: "03", links: [
+    { label: "Hijama overview", href: "/services/hijama-therapy" }, { label: "Wet Hijama", href: "/services/wet-hijama" },
+    { label: "Dry cupping", href: "/services/dry-cupping" }, { label: "Sunnah Hijama", href: "/services/sunnah-hijama" },
+    { label: "Safety & hygiene", href: "/hijama-safety" }, { label: "Female Hijama", href: "/women-care" },
+    { label: "Sunnah dates", href: "/hijama-sunnah-dates" },
+  ] },
+  { title: "Conditions", marker: "04", links: [
+    { label: "Back pain", href: "/treatments/back-pain" }, { label: "Neck pain", href: "/treatments/neck-pain" },
+    { label: "Sciatica", href: "/treatments/sciatica-pain" }, { label: "Frozen shoulder", href: "/treatments/frozen-shoulder" },
+    { label: "Knee pain", href: "/treatments/knee-pain" }, { label: "Stroke rehabilitation", href: "/treatments/stroke-rehabilitation" },
+    { label: "Knee replacement", href: "/treatments/knee-replacement-rehabilitation" }, { label: "Cerebral palsy", href: "/treatments/cerebral-palsy-rehabilitation" },
+  ] },
 ];
 
 function LocationIcon() {
@@ -47,7 +76,7 @@ export function Header() {
     <header className="site-header">
       <div className="header-ribbon">
         <p><LocationIcon /> Street 19, J Sector, DHA Phase 2, Islamabad</p>
-        <p>Physiotherapy &amp; Hijama care in Islamabad</p>
+        <Link href="/women-care">Women&apos;s physiotherapy &amp; Hijama care →</Link>
       </div>
       <div className="topbar">
         <Link className="brand" href="/" aria-label="Flex Well home">
@@ -75,12 +104,15 @@ export function Header() {
         </Link>
         <button className="drawer-close" type="button" aria-label="Close navigation menu" tabIndex={menuOpen ? 0 : -1} onClick={() => setMenuOpen(false)}>&#215;</button>
       </div>
-      <p className="drawer-label">Explore</p>
-      <nav className="drawer-nav" aria-label="Mobile navigation">
-        {navigation.map((item, index) => {
-          const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
-          return <Link className={active ? "is-active" : ""} aria-current={active ? "page" : undefined} href={item.href} key={item.href} tabIndex={menuOpen ? 0 : -1} onClick={() => setMenuOpen(false)}><span>0{index + 1}</span>{item.label}<ArrowIcon /></Link>;
-        })}
+      <p className="drawer-label">Browse care</p>
+      <nav className="drawer-nav drawer-nav-grouped" aria-label="Mobile navigation">
+        {drawerSections.map((section) => <section className="drawer-section" key={section.title}>
+          <h2><span>{section.marker}</span>{section.title}</h2>
+          <div>{section.links.map((item) => {
+            const active = item.href === "/" ? pathname === "/" : pathname === item.href;
+            return <Link className={active ? "is-active" : ""} aria-current={active ? "page" : undefined} href={item.href} key={item.href} tabIndex={menuOpen ? 0 : -1} onClick={() => setMenuOpen(false)}>{item.label}<ArrowIcon /></Link>;
+          })}</div>
+        </section>)}
       </nav>
       <div className="drawer-footer">
         <p><LocationIcon /> DHA Phase 2, Islamabad</p>
@@ -116,9 +148,13 @@ export function Footer() {
         <h2>Our care</h2>
         <nav aria-label="Services">
           <Link href="/services/physiotherapy">Physiotherapy</Link>
+          <Link href="/services/neurological-physiotherapy">Neurological physiotherapy</Link>
+          <Link href="/services/paediatric-physiotherapy">Paediatric physiotherapy</Link>
+          <Link href="/home-physiotherapy">Home physiotherapy</Link>
           <Link href="/services/hijama-therapy">Hijama therapy</Link>
-          <Link href="/services/pain-management">Pain management</Link>
-          <Link href="/services/rehabilitation">Rehabilitation</Link>
+          <Link href="/hijama-safety">Hijama safety</Link>
+          <Link href="/hijama-sunnah-dates">Sunnah dates</Link>
+          <Link href="/women-care">Women&apos;s care</Link>
         </nav>
       </div>
 

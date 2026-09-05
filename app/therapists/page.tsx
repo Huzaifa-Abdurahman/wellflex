@@ -65,6 +65,8 @@ export default function TherapistsPage() {
       </article>)}
     </section>
 
+    <div className="women-team-link"><div><p className="section-label">Prefer a female practitioner?</p><h2>Explore our dedicated women&apos;s care options.</h2></div><Link className="button button-light" href="/women-care">View women&apos;s care <ArrowIcon /></Link></div>
+
     <section className="team-cta">
       <div><p className="section-label">Your first appointment</p><h2>Not sure which therapist is right for you?</h2><p>Tell us what you need help with and we’ll guide you towards the most suitable appointment.</p></div>
       <Link className="button button-primary" href="/contact">Talk to our clinic <ArrowIcon /></Link>

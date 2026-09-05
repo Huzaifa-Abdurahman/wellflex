@@ -163,6 +163,82 @@ export const treatments: Treatment[] = [
       { title: "Aftercare", text: "You receive guidance on rest, hydration, skin care and when to seek further advice." },
     ],
   },
+  {
+    slug: "frozen-shoulder",
+    title: "Frozen Shoulder",
+    description: "Stage-aware support for shoulder pain, stiffness and restricted everyday reach.",
+    image: "/shoulder-pain.jfif",
+    imageAlt: "Person experiencing restricted and painful shoulder movement",
+    overview: [
+      "Frozen shoulder can cause substantial pain and a progressive loss of shoulder movement. Dressing, sleeping, reaching overhead and placing a hand behind the back may become particularly difficult.",
+      "Recovery can take time and symptoms vary by stage. We assess your current irritability and function, then select education, movement and strengthening that do not unnecessarily aggravate the shoulder. Medical review may be advised when the diagnosis is uncertain or symptoms require additional investigation.",
+    ],
+    commonSigns: ["Increasing shoulder stiffness", "Pain during reaching or dressing", "Difficulty lying on the affected side", "Restricted movement in several directions", "Loss of behind-the-back reach"],
+    goals: ["Maintain useful movement", "Reduce avoidable symptom aggravation", "Restore range as tolerance improves", "Rebuild strength for daily activity"],
+    plan: [
+      { title: "Confirm the pattern", text: "We assess movement and screen for other shoulder or neck-related causes." },
+      { title: "Match the stage", text: "Advice and exercise intensity reflect current pain and stiffness." },
+      { title: "Restore movement", text: "Mobility work progresses without forcing highly irritable symptoms." },
+      { title: "Rebuild function", text: "Strength and task practice prepare the shoulder for everyday use." },
+    ],
+  },
+  {
+    slug: "stroke-rehabilitation",
+    title: "Stroke Rehabilitation",
+    description: "Individual movement, balance and mobility practice following a stroke.",
+    image: "/rehabillation.jfif",
+    imageAlt: "Patient receiving supported walking practice during rehabilitation",
+    overview: [
+      "A stroke can affect movement, balance, sensation, coordination, fatigue and confidence in different ways. Physiotherapy is one part of multidisciplinary rehabilitation and should reflect medical guidance, current ability and the person's own priorities.",
+      "Sessions may practise bed mobility, transfers, sitting, standing, walking and selected exercises. Suitability for clinic or home care is reviewed individually, and urgent new or worsening stroke symptoms require emergency medical attention.",
+    ],
+    commonSigns: ["Weakness on one side", "Balance or coordination difficulties", "Reduced walking confidence", "Difficulty with transfers", "Fatigue affecting activity"],
+    goals: ["Practise meaningful everyday tasks", "Improve safe mobility where possible", "Build strength and activity tolerance", "Support patients and caregivers with clear guidance"],
+    plan: [
+      { title: "Review", text: "We consider hospital guidance, current support needs and personal goals." },
+      { title: "Establish a baseline", text: "Movement, balance, transfers and mobility are assessed safely." },
+      { title: "Practise", text: "Relevant tasks are repeated with an appropriate level of support." },
+      { title: "Progress together", text: "The programme adapts with recovery and wider team recommendations." },
+    ],
+  },
+  {
+    slug: "knee-replacement-rehabilitation",
+    title: "Knee Replacement Rehabilitation",
+    description: "Progressive rehabilitation after total or partial knee replacement surgery.",
+    image: "/post-surgery-pain.jfif",
+    imageAlt: "Physiotherapist supporting knee rehabilitation after surgery",
+    overview: [
+      "Rehabilitation after knee replacement commonly focuses on safe mobility, knee movement, swelling management, leg strength and a gradual return to everyday tasks. Your surgeon's instructions and individual healing remain the priority.",
+      "We review your operation details, precautions and current walking ability before progressing exercises. Unexpected wound changes, calf swelling, chest pain, breathing difficulty or sudden deterioration require prompt medical assessment rather than routine physiotherapy.",
+    ],
+    commonSigns: ["Stiffness after knee replacement", "Reduced thigh strength", "Difficulty walking or using stairs", "Reliance on a walking aid", "Uncertainty about exercise progression"],
+    goals: ["Follow surgical precautions", "Restore useful knee movement", "Improve walking and leg strength", "Regain confidence with daily tasks"],
+    plan: [
+      { title: "Check instructions", text: "We review discharge advice, weight-bearing status and precautions." },
+      { title: "Restore essentials", text: "Early work supports transfers, walking and comfortable knee movement." },
+      { title: "Build strength", text: "Exercise progresses across the hip, knee and calf as appropriate." },
+      { title: "Return to routine", text: "Later practice reflects stairs, community walking and daily demands." },
+    ],
+  },
+  {
+    slug: "cerebral-palsy-rehabilitation",
+    title: "Cerebral Palsy Rehabilitation",
+    description: "Individual movement support developed around ability, participation and family goals.",
+    image: "/Exercise Therapy.jfif",
+    imageAlt: "Therapist guiding individual movement and strengthening practice",
+    overview: [
+      "Cerebral palsy affects each person differently. Physiotherapy may support movement, strength, range, positioning, mobility and participation, but care is often most effective when coordinated with the person's medical, occupational therapy and wider support team.",
+      "We review age, diagnosis, current equipment, communication needs and existing clinical recommendations before accepting an appointment. Specialist referral is recommended whenever needs exceed the clinic's expertise or facilities.",
+    ],
+    commonSigns: ["Differences in movement or muscle tone", "Reduced balance or coordination", "Muscle weakness or limited range", "Difficulty with transfers or walking", "Changing mobility needs over time"],
+    goals: ["Support meaningful movement and participation", "Maintain strength and available range", "Practise mobility and daily tasks", "Give families realistic activity guidance"],
+    plan: [
+      { title: "Understand the person", text: "We discuss abilities, challenges, equipment and existing care recommendations." },
+      { title: "Set shared goals", text: "Priorities are agreed with the patient and family or caregiver." },
+      { title: "Practise purposefully", text: "Activities focus on useful movement at an appropriate level." },
+      { title: "Review and coordinate", text: "Progress is monitored and wider-team input encouraged where needed." },
+    ],
+  },
 ];
 
 export function getTreatment(slug: string) {
