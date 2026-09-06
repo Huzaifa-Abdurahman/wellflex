@@ -6,13 +6,13 @@ export const siteConfig = {
   address: "Street 19, Sector J, DHA Phase II, Islamabad, Pakistan",
   social: {
     instagram: "https://www.instagram.com/flex_well_physiotherapy/",
-    facebook: "https://www.facebook.com/share/1G6L4PyUFr/?utm_source=ig&utm_medium=social&utm_content=link_in_bio",
+    facebook: "https://www.facebook.com/share/1LMDmiUfau/",
   },
 } as const;
 
 export function getBookingWhatsAppUrl(subject?: string) {
   const message = [
-    "Hello Flex Well, I would like to book an appointment.",
+    "Hello Flex Well Physiotherapy Center, I would like to book an appointment.",
     "",
     "Name: ",
     `Preferred service or treatment: ${subject ?? ""}`,

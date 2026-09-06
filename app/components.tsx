@@ -16,34 +16,6 @@ const navigation = [
   { label: "Contact", href: "/contact" },
 ];
 
-const drawerSections = [
-  { title: "Main pages", marker: "01", links: [
-    { label: "Home", href: "/" }, { label: "About Flex Well", href: "/about#about-flex-well" },
-    { label: "Our mission", href: "/about#mission" }, { label: "Why choose us", href: "/about#why-choose" },
-    { label: "Our team", href: "/therapists" }, { label: "Contact", href: "/contact" },
-  ] },
-  { title: "Physiotherapy", marker: "02", links: [
-    { label: "Physiotherapy", href: "/services/physiotherapy" }, { label: "Orthopaedic", href: "/services/orthopaedic-physiotherapy" },
-    { label: "Neurological", href: "/services/neurological-physiotherapy" }, { label: "Sports rehabilitation", href: "/treatments/sports-injuries" },
-    { label: "Paediatric", href: "/services/paediatric-physiotherapy" }, { label: "Older adult care", href: "/services/older-adult-physiotherapy" },
-    { label: "Post-surgical", href: "/services/post-surgical-physiotherapy" }, { label: "Manual therapy", href: "/services/manual-therapy" },
-    { label: "Exercise therapy", href: "/services/exercise-therapy" }, { label: "Dry needling", href: "/services/dry-needling" },
-    { label: "Home physiotherapy", href: "/home-physiotherapy" },
-  ] },
-  { title: "Hijama", marker: "03", links: [
-    { label: "Hijama overview", href: "/services/hijama-therapy" }, { label: "Wet Hijama", href: "/services/wet-hijama" },
-    { label: "Dry cupping", href: "/services/dry-cupping" }, { label: "Sunnah Hijama", href: "/services/sunnah-hijama" },
-    { label: "Safety & hygiene", href: "/hijama-safety" }, { label: "Female Hijama", href: "/women-care" },
-    { label: "Sunnah dates", href: "/hijama-sunnah-dates" },
-  ] },
-  { title: "Conditions", marker: "04", links: [
-    { label: "Back pain", href: "/treatments/back-pain" }, { label: "Neck pain", href: "/treatments/neck-pain" },
-    { label: "Sciatica", href: "/treatments/sciatica-pain" }, { label: "Frozen shoulder", href: "/treatments/frozen-shoulder" },
-    { label: "Knee pain", href: "/treatments/knee-pain" }, { label: "Stroke rehabilitation", href: "/treatments/stroke-rehabilitation" },
-    { label: "Knee replacement", href: "/treatments/knee-replacement-rehabilitation" }, { label: "Cerebral palsy", href: "/treatments/cerebral-palsy-rehabilitation" },
-  ] },
-];
-
 function LocationIcon() {
   return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></svg>;
 }
@@ -79,9 +51,9 @@ export function Header() {
         <Link href="/women-care">Women&apos;s physiotherapy &amp; Hijama care →</Link>
       </div>
       <div className="topbar">
-        <Link className="brand" href="/" aria-label="Flex Well home">
+        <Link className="brand" href="/" aria-label="Flex Well Physiotherapy Center home">
           <span className="brand-logo"><Image src="/logo.jpg" alt="" width={58} height={58} priority /></span>
-          <span className="brand-name">Flex Well<small>Physiotherapy &amp; Hijama Center</small></span>
+          <span className="brand-name">Flex Well<small>Physiotherapy Center</small></span>
         </Link>
         <nav className="topnav" aria-label="Main navigation">
           {navigation.map((item) => {
@@ -100,19 +72,16 @@ export function Header() {
       <div className="drawer-head">
         <Link className="brand" href="/" tabIndex={menuOpen ? 0 : -1} onClick={() => setMenuOpen(false)}>
           <span className="brand-logo"><Image src="/logo.jpg" alt="" width={52} height={52} /></span>
-          <span className="brand-name">Flex Well<small>Physiotherapy &amp; Hijama Center</small></span>
+          <span className="brand-name">Flex Well<small>Physiotherapy Center</small></span>
         </Link>
         <button className="drawer-close" type="button" aria-label="Close navigation menu" tabIndex={menuOpen ? 0 : -1} onClick={() => setMenuOpen(false)}>&#215;</button>
       </div>
       <p className="drawer-label">Browse care</p>
-      <nav className="drawer-nav drawer-nav-grouped" aria-label="Mobile navigation">
-        {drawerSections.map((section) => <section className="drawer-section" key={section.title}>
-          <h2><span>{section.marker}</span>{section.title}</h2>
-          <div>{section.links.map((item) => {
-            const active = item.href === "/" ? pathname === "/" : pathname === item.href;
-            return <Link className={active ? "is-active" : ""} aria-current={active ? "page" : undefined} href={item.href} key={item.href} tabIndex={menuOpen ? 0 : -1} onClick={() => setMenuOpen(false)}>{item.label}<ArrowIcon /></Link>;
-          })}</div>
-        </section>)}
+      <nav className="drawer-nav drawer-nav-standard" aria-label="Mobile navigation">
+        {navigation.map((item) => {
+          const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+          return <Link className={active ? "is-active" : ""} aria-current={active ? "page" : undefined} href={item.href} key={item.href} tabIndex={menuOpen ? 0 : -1} onClick={() => setMenuOpen(false)}>{item.label}</Link>;
+        })}
       </nav>
       <div className="drawer-footer">
         <p><LocationIcon /> DHA Phase 2, Islamabad</p>
@@ -126,14 +95,14 @@ export function Footer() {
   return <footer className="site-footer">
     <div className="footer-inner">
       <div className="footer-brand">
-        <Link className="brand" href="/" aria-label="Flex Well home">
+        <Link className="brand" href="/" aria-label="Flex Well Physiotherapy Center home">
           <span className="brand-logo"><Image src="/logo.jpg" alt="" width={64} height={64} /></span>
-          <span className="brand-name">Flex Well<small>Physiotherapy &amp; Hijama Center</small></span>
+          <span className="brand-name">Flex Well<small>Physiotherapy Center</small></span>
         </Link>
         <p>Helping Islamabad move with less pain and more confidence.</p>
         <div className="footer-socials">
-          <a href={siteConfig.social.instagram} target="_blank" rel="noreferrer" aria-label="Flex Well on Instagram">Instagram</a>
-          <a href={siteConfig.social.facebook} target="_blank" rel="noreferrer" aria-label="Flex Well on Facebook">Facebook</a>
+          <a href={siteConfig.social.instagram} target="_blank" rel="noreferrer" aria-label="Flex Well Physiotherapy Center on Instagram">Instagram</a>
+          <a href={siteConfig.social.facebook} target="_blank" rel="noreferrer" aria-label="Flex Well Physiotherapy Center on Facebook">Facebook</a>
         </div>
       </div>
 
@@ -167,7 +136,7 @@ export function Footer() {
       </div>
     </div>
     <div className="footer-bottom">
-      <p>© Flex Well Physiotherapy &amp; Hijama Center</p>
+      <p>© Flex Well Physiotherapy Center</p>
       <nav aria-label="Legal information">
         <Link href="/legal/privacy-policy">Privacy</Link>
         <Link href="/legal/terms-of-use">Terms</Link>

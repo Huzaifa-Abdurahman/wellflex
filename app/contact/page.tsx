@@ -5,8 +5,8 @@ import { siteConfig } from "../site-config";
 import { ContactForm } from "./contact-form";
 
 export const metadata: Metadata = {
-  title: "Contact & Appointments | Flex Well Islamabad",
-  description: "Call, WhatsApp or send an appointment enquiry to Flex Well Physiotherapy and Hijama Center in DHA Phase 2, Islamabad.",
+  title: "Contact & Appointments | Flex Well Physiotherapy Center Islamabad",
+  description: "Call, WhatsApp or send an appointment enquiry to Flex Well Physiotherapy Center in DHA Phase 2, Islamabad.",
 };
 
 const address = siteConfig.address;
@@ -26,7 +26,7 @@ function ArrowIcon() {
 export default function ContactPage() {
   return <PageShell><main className="contact-page">
     <section className="contact-hero">
-      <div><p className="section-label">Contact Flex Well</p><h1>Plan your next step.</h1></div>
+      <div><p className="section-label">Contact Flex Well Physiotherapy Center</p><h1>Plan your next step.</h1></div>
       <p>Book a visit or ask our team a question.</p>
     </section>
 
@@ -49,13 +49,13 @@ export default function ContactPage() {
           <div><p>Visit us</p><h2>{address}</h2><span>DHA Phase II, Islamabad.</span><a href={directionsUrl} target="_blank" rel="noreferrer">Get directions <ArrowIcon /></a></div>
         </div>
       </div>
-      <div className="contact-socials"><p>Follow Flex Well</p><div><a href={siteConfig.social.instagram} target="_blank" rel="noreferrer">Instagram <ArrowIcon /></a><a href={siteConfig.social.facebook} target="_blank" rel="noreferrer">Facebook <ArrowIcon /></a></div></div></div>
+      <div className="contact-socials"><p>Follow Flex Well Physiotherapy Center</p><div><a href={siteConfig.social.instagram} target="_blank" rel="noreferrer">Instagram <ArrowIcon /></a><a href={siteConfig.social.facebook} target="_blank" rel="noreferrer">Facebook <ArrowIcon /></a></div></div></div>
       <ContactForm />
     </section>
 
     <section className="map-section">
       <div className="map-heading"><div><p className="section-label">Find the clinic</p><h2>Conveniently located in DHA Phase II.</h2></div><Link className="text-link" href={directionsUrl} target="_blank" rel="noreferrer">Open in Google Maps <ArrowIcon /></Link></div>
-      <div className="map-frame"><iframe title="Google map showing Flex Well clinic location in DHA Phase II, Islamabad" src="https://www.google.com/maps?q=Street%2019%2C%20Sector%20J%2C%20DHA%20Phase%20II%2C%20Islamabad%2C%20Pakistan&output=embed" loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade" /></div>
+      <div className="map-frame"><iframe title="Google map showing Flex Well Physiotherapy Center location in DHA Phase II, Islamabad" src="https://www.google.com/maps?q=Street%2019%2C%20Sector%20J%2C%20DHA%20Phase%20II%2C%20Islamabad%2C%20Pakistan&output=embed" loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade" /></div>
     </section>
   </main></PageShell>;
 }

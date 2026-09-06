@@ -5,8 +5,8 @@ import { PageShell } from "../components";
 import { getBookingWhatsAppUrl } from "../site-config";
 
 export const metadata: Metadata = {
-  title: "Hijama Safety & Hygiene Protocol | Flex Well Islamabad",
-  description: "Learn about Flex Well's consultation, screening, single-use equipment, hygiene, sharps disposal and aftercare approach for Hijama therapy.",
+  title: "Hijama Safety & Hygiene Protocol | Flex Well Physiotherapy Center Islamabad",
+  description: "Learn about Flex Well Physiotherapy Center's consultation, screening, single-use equipment, hygiene, sharps disposal and aftercare approach for Hijama therapy.",
 };
 
 const protocol = [
@@ -54,7 +54,7 @@ export default function HijamaSafetyPage() {
     <section className="safety-intro">
       <p className="section-label">A considered approach</p>
       <h2>Clean. Clear. Informed.</h2>
-      <p>Hijama involves contact with skin and, in wet cupping, controlled superficial skin incisions. That makes screening and infection-control practices essential—not optional extras. Our published protocol sets out the standard patients should expect at Flex Well.</p>
+      <p>Hijama involves contact with skin and, in wet cupping, controlled superficial skin incisions. That makes screening and infection-control practices essential—not optional extras. Our published protocol sets out the standard patients should expect at Flex Well Physiotherapy Center.</p>
     </section>
 
     <section className="safety-protocol" id="safety-protocol">

@@ -18,7 +18,7 @@ export const services: Service[] = [
     image: "/physciotherapy.jpg",
     imageAlt: "Physiotherapist assessing and treating a patient",
     introduction: [
-      "Physiotherapy is a personalised, evidence-informed approach to restoring movement and helping you return to the activities that matter. At Flex Well, treatment begins with listening carefully to your concerns, assessing how your body moves, and understanding the demands of your daily life.",
+      "Physiotherapy is a personalised, evidence-informed approach to restoring movement and helping you return to the activities that matter. At Flex Well Physiotherapy Center, treatment begins with listening carefully to your concerns, assessing how your body moves, and understanding the demands of your daily life.",
       "Your plan may combine guided movement, hands-on treatment, education and practical home exercises. The aim is not only to ease current symptoms, but also to build the confidence and physical capacity needed for lasting progress.",
     ],
     suitableFor: ["Back, neck or joint pain", "Sports and everyday injuries", "Reduced strength or mobility", "Postural and movement concerns", "Recovery after a period of inactivity"],
@@ -37,7 +37,7 @@ export const services: Service[] = [
     image: "/hajjama.jpg",
     imageAlt: "Hijama cups arranged for a traditional cupping treatment",
     introduction: [
-      "Hijama, also known as wet cupping, is a traditional wellness practice chosen by many people as part of their personal self-care routine. At Flex Well, every session is approached calmly and professionally, with careful attention to privacy, hygiene and your comfort.",
+      "Hijama, also known as wet cupping, is a traditional wellness practice chosen by many people as part of their personal self-care routine. At Flex Well Physiotherapy Center, every session is approached calmly and professionally, with careful attention to privacy, hygiene and your comfort.",
       "Before treatment, we discuss your expectations and relevant health information to determine whether the service is appropriate for you. Hijama is offered as a complementary wellness practice and is not a replacement for medical diagnosis or treatment.",
     ],
     suitableFor: ["People seeking traditional wellness care", "Those interested in complementary self-care", "Adults who have been appropriately screened", "Clients seeking a calm, private treatment experience"],
@@ -95,7 +95,7 @@ export const services: Service[] = [
     imageAlt: "Therapist applying a hands-on manual therapy technique",
     introduction: [
       "Manual therapy uses skilled, hands-on techniques to assess and support the movement of joints and soft tissues. It can be a useful part of treatment when stiffness, sensitivity or restricted movement is limiting your comfort and function.",
-      "At Flex Well, hands-on care is never used in isolation. We combine it with movement, education and exercise so that short-term changes contribute to meaningful, longer-term improvement.",
+      "At Flex Well Physiotherapy Center, hands-on care is never used in isolation. We combine it with movement, education and exercise so that short-term changes contribute to meaningful, longer-term improvement.",
     ],
     suitableFor: ["Joint stiffness and restricted movement", "Muscle tightness or sensitivity", "Neck, back and shoulder concerns", "Recovery where movement feels guarded", "Clients who may benefit from hands-on support"],
     benefits: ["Improved comfort during movement", "Support for joint and soft-tissue mobility", "Reduced guarding and movement apprehension", "Better preparation for active rehabilitation"],
@@ -205,7 +205,7 @@ export const services: Service[] = [
     slug: "post-surgical-physiotherapy",
     title: "Post-Surgical Physiotherapy",
     description: "Rehabilitation aligned with your procedure, precautions and recovery goals.",
-    image: "/post-surgery-pain.jpg",
+    image: "/post-surgery.PNG",
     imageAlt: "Patient receiving physiotherapy support after surgery",
     introduction: [
       "Post-surgical physiotherapy supports movement, strength and independence after an operation. The right pace depends on the procedure, healing stage, surgeon's instructions and your current function.",

@@ -20,10 +20,7 @@ export default function TreatmentsPage() {
           <Image src={treatment.image} alt={treatment.imageAlt} fill sizes="(max-width: 700px) 34vw, (max-width: 1050px) 50vw, 33vw" priority={index < 3} />
         </Link>
         <div className="service-card-copy">
-          <p className="service-number">0{index + 1}</p>
           <h2><Link href={`/treatments/${treatment.slug}`}>{treatment.title}</Link></h2>
-          <p>{treatment.description}</p>
-          <Link className="service-link" href={`/treatments/${treatment.slug}`}>Learn more <ArrowIcon /></Link>
         </div>
       </article>)}
     </section>

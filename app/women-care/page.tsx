@@ -5,8 +5,8 @@ import { PageShell } from "../components";
 import { getBookingWhatsAppUrl } from "../site-config";
 
 export const metadata: Metadata = {
-  title: "Female Physiotherapist & Hijama Care in Islamabad | Flex Well",
-  description: "Ask about private female physiotherapy and female Hijama appointments at Flex Well in DHA Phase 2, Islamabad.",
+  title: "Female Physiotherapist & Hijama Care in Islamabad | Flex Well Physiotherapy Center",
+  description: "Ask about private female physiotherapy and female Hijama appointments at Flex Well Physiotherapy Center in DHA Phase 2, Islamabad.",
 };
 
 const careOptions = [
@@ -53,7 +53,7 @@ export default function WomenCarePage() {
 
     <section className="women-practitioner">
       <div className="women-practitioner-mark" aria-hidden="true">A</div>
-      <div><p className="section-label">Meet a female practitioner</p><h2>Ayesha</h2><p>Movement-focused care with clear guidance.</p><Link className="text-link" href="/therapists">View therapist profile <ArrowIcon /></Link></div>
+      <div><p className="section-label">Meet a female practitioner</p><h2>Dr Ayesha Bashir</h2><p>Movement-focused care with clear guidance.</p><Link className="text-link" href="/therapists">View therapist profile <ArrowIcon /></Link></div>
       <Link className="button button-primary" href={bookingUrl} target="_blank" rel="noreferrer">Request an appointment <ArrowIcon /></Link>
     </section>
 

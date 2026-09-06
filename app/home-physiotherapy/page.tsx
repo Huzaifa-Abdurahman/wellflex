@@ -5,7 +5,7 @@ import { PageShell } from "../components";
 import { getBookingWhatsAppUrl } from "../site-config";
 
 export const metadata: Metadata = {
-  title: "Home Physiotherapy in Islamabad & Rawalpindi | Flex Well",
+  title: "Home Physiotherapy in Islamabad & Rawalpindi | Flex Well Physiotherapy Center",
   description: "Ask about professional home physiotherapy visits for rehabilitation, mobility and exercise support across selected areas of Islamabad and Rawalpindi.",
 };
 

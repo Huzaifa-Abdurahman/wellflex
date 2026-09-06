@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 
-const manrope = Manrope({
-  variable: "--font-manrope",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Flex Well | Physiotherapy & Hijama Center",
+  title: "Flex Well Physiotherapy Center",
   description: "Helping you heal, move, and thrive in DHA 2, Islamabad.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
-  return <html lang="en" className={manrope.variable}><body>{children}</body></html>;
+  return <html lang="en" className={montserrat.variable}><body>{children}</body></html>;
 }

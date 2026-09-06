@@ -13,7 +13,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: LegalPageProps): Promise<Metadata> {
   const page = getLegalPage((await params).slug);
   if (!page) return {};
-  return { title: `${page.title} | Flex Well`, description: page.summary };
+  return { title: `${page.title} | Flex Well Physiotherapy Center`, description: page.summary };
 }
 
 export default async function LegalPage({ params }: LegalPageProps) {
@@ -32,7 +32,7 @@ export default async function LegalPage({ params }: LegalPageProps) {
       <aside className="legal-index">
         <p>On this page</p>
         <nav aria-label={`${page.title} sections`}>{page.sections.map((section, index) => <a href={`#section-${index + 1}`} key={section.heading}>{section.heading.replace(/^\d+\.\s*/, "")}</a>)}</nav>
-        <div><strong>Questions?</strong><a href="mailto:qadeerkhan3945@gmail.com">Email Flex Well</a></div>
+        <div><strong>Questions?</strong><a href="mailto:qadeerkhan3945@gmail.com">Email Flex Well Physiotherapy Center</a></div>
       </aside>
 
       <article className="legal-content">

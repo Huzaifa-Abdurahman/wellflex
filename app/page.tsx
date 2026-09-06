@@ -10,7 +10,7 @@ const googleReviews = [
   {
     name: "Fakhar Zaman",
     date: "6 months ago",
-    quote: "Flex Well Physiotherapy is very good, especially Dr. Qadeer Muneer, who is very cooperative and kind.",
+    quote: "Flex Well Physiotherapy Center is very good, especially Dr. Qadeer Muneer, who is very cooperative and kind.",
   },
   {
     name: "Maneela Shurfa",
@@ -20,7 +20,7 @@ const googleReviews = [
   {
     name: "Farhat Sharaz",
     date: "8 months ago",
-    quote: "Alhamdulillah because of Dr Qadeers efforts and therapy services he is alhamdulillah able to walk independently for few minutes.",
+    quote: "Alhamdulillah because of Dr Qadeer Muneer's efforts and therapy services he is alhamdulillah able to walk independently for few minutes.",
   },
   {
     name: "Adeel Hussain",
@@ -64,7 +64,7 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow">Move well. Live well.</p>
           <h1>FLEX WELL</h1>
-          <p className="hero-subtitle">PHYSIOTHERAPY &amp; HIJAMA CENTER</p>
+          <p className="hero-subtitle">PHYSIOTHERAPY CENTER</p>
           <p className="hero-tagline">Healing today, stronger tomorrow.</p>
           <p className="hero-description">One-to-one care for less pain and better movement.</p>
           <div className="hero-actions"><Link className="button button-primary" href={getBookingWhatsAppUrl()} target="_blank" rel="noreferrer">Book an appointment</Link><Link className="button button-light" href="/services">Explore services</Link></div>
@@ -73,24 +73,24 @@ export default function Home() {
         <div className="hero-visual" role="img" aria-label="Physiotherapist providing treatment to a patient" />
       </div>
     </section>
-    <section className="benefit-panel" aria-label="Why choose Flex Well">
+    <section className="benefit-panel" aria-label="Why choose Flex Well Physiotherapy Center">
       <div className="feature-strip">
         {benefits.map((benefit) => <div className="feature" key={benefit.title}><BenefitIcon type={benefit.icon} /><span>{benefit.title}</span></div>)}
       </div>
       <Link className="mobile-booking button button-primary" href={getBookingWhatsAppUrl()} target="_blank" rel="noreferrer">Book an appointment</Link>
     </section>
 
-    <section className="clinic-story" aria-label="Flex Well clinic and team">
+    <section className="clinic-story" aria-label="Flex Well Physiotherapy Center clinic and team">
       <div className="clinic-story-copy">
-        <p className="section-label">Inside Flex Well</p>
+        <p className="section-label">Inside Flex Well Physiotherapy Center</p>
         <h2>Care you can feel confident in.</h2>
         <p>A welcoming clinic, an experienced team and treatment focused on your goals.</p>
-        <Link className="text-link" href="/about">Discover Flex Well <span aria-hidden="true">→</span></Link>
+        <Link className="text-link" href="/about">Discover Flex Well Physiotherapy Center <span aria-hidden="true">→</span></Link>
       </div>
       <div className="clinic-gallery">
-        <div className="clinic-gallery-image"><Image src="/full-staff.jpg" alt="Full Flex Well physiotherapy team" fill sizes="(max-width: 700px) 100vw, 45vw" /></div>
-        <div className="clinic-gallery-image"><Image src="/dr-male.jpeg" alt="Flex Well physiotherapist treating a patient" fill sizes="(max-width: 700px) 50vw, 24vw" /></div>
-        <div className="clinic-gallery-image"><Image src="/staff.jpg" alt="Flex Well clinic staff" fill sizes="(max-width: 700px) 50vw, 24vw" /></div>
+        <div className="clinic-gallery-image"><Image src="/full-staff.jpg" alt="Full Flex Well Physiotherapy Center team" fill sizes="(max-width: 700px) 100vw, 45vw" /></div>
+        <div className="clinic-gallery-image"><Image src="/dr-male.jpeg" alt="Flex Well Physiotherapy Center physiotherapist treating a patient" fill sizes="(max-width: 700px) 50vw, 24vw" /></div>
+        <div className="clinic-gallery-image"><Image src="/staff.jpg" alt="Flex Well Physiotherapy Center clinic staff" fill sizes="(max-width: 700px) 50vw, 24vw" /></div>
       </div>
     </section>
 

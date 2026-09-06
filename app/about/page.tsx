@@ -5,8 +5,8 @@ import { PageShell } from "../components";
 import { getBookingWhatsAppUrl } from "../site-config";
 
 export const metadata: Metadata = {
-  title: "About Flex Well | Physiotherapy & Hijama in Islamabad",
-  description: "Learn about Flex Well's patient-centred approach to physiotherapy, rehabilitation and Hijama wellness care in DHA Phase 2, Islamabad.",
+  title: "About Flex Well Physiotherapy Center | Islamabad",
+  description: "Learn about Flex Well Physiotherapy Center's patient-centred approach to physiotherapy, rehabilitation and Hijama wellness care in DHA Phase 2, Islamabad.",
 };
 
 const values = [
@@ -31,12 +31,12 @@ export default function AboutPage() {
   return <PageShell><main className="about-page">
     <section className="about-hero" id="about-flex-well">
       <div className="about-image">
-        <Image src="/about.jpg" alt="Bright and welcoming Flex Well therapy room" fill priority sizes="(max-width: 800px) 100vw, 55vw" />
+        <Image src="/about.jpg" alt="Bright and welcoming Flex Well Physiotherapy Center therapy room" fill priority sizes="(max-width: 800px) 100vw, 55vw" />
         <span>Our space in DHA Phase 2</span>
       </div>
 
       <div className="about-copy">
-        <p className="section-label">About Flex Well</p>
+        <p className="section-label">About Flex Well Physiotherapy Center</p>
         <h1>Move well. Feel stronger.</h1>
         <p>Expert, compassionate care built around you.</p>
         <p>Personal treatment. Clear guidance. Meaningful progress.</p>
@@ -63,18 +63,18 @@ export default function AboutPage() {
       </div>
       <div className="about-team-grid">
         <Link className="about-team-card" href="/therapists">
-          <div className="about-team-image"><Image src="/male-team.jpg" alt="Dr Qadeer at Flex Well" fill sizes="(max-width: 700px) 100vw, 50vw" /></div>
-          <div><h3>Dr Qadeer</h3><p>Physiotherapy &amp; Rehabilitation</p></div>
+          <div className="about-team-image"><Image src="/male-team.jpg" alt="Dr Qadeer Muneer at Flex Well Physiotherapy Center" fill sizes="(max-width: 700px) 100vw, 50vw" /></div>
+          <div><h3>Dr Qadeer Muneer</h3><p>Physiotherapy &amp; Rehabilitation</p></div>
         </Link>
         <Link className="about-team-card" href="/therapists">
-          <div className="about-team-image about-team-image-female"><Image src="/female-team.jpg" alt="Dr Ayesha at Flex Well" fill sizes="(max-width: 700px) 100vw, 50vw" /></div>
-          <div><h3>Dr Ayesha</h3><p>Mobility, Exercise &amp; Wellness Care</p></div>
+          <div className="about-team-image about-team-image-female"><Image src="/female-team.jpg" alt="Dr Ayesha Bashir at Flex Well Physiotherapy Center" fill sizes="(max-width: 700px) 100vw, 50vw" /></div>
+          <div><h3>Dr Ayesha Bashir</h3><p>Mobility, Exercise &amp; Wellness Care</p></div>
         </Link>
       </div>
     </section>
 
     <section className="about-cta">
-      <div><p className="section-label">Visit Flex Well</p><h2>Start moving with confidence.</h2><p>Street 19, J Sector, DHA Phase 2.</p></div>
+      <div><p className="section-label">Visit Flex Well Physiotherapy Center</p><h2>Start moving with confidence.</h2><p>Street 19, J Sector, DHA Phase 2.</p></div>
       <div><Link className="button button-primary" href={getBookingWhatsAppUrl()} target="_blank" rel="noreferrer">Book an appointment <ArrowIcon /></Link><Link className="text-link" href="/therapists">Meet our therapists</Link></div>
     </section>
   </main></PageShell>;

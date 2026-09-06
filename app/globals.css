@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
-/* Flex Well design system — keep all site-wide color and type decisions here. */
+/* Flex Well Physiotherapy Center design system — keep all site-wide color and type decisions here. */
 :root {
   --color-ink: #132d35;
-  --color-ink-soft: #415d64;
+  --color-ink-soft: #344f56;
   --color-teal: #0796a6;
   --color-teal-dark: #067580;
   --color-teal-soft: #e8f6f6;
@@ -11,9 +11,9 @@
   --color-surface: #ffffff;
   --color-line: #dbe8e6;
   --color-shadow: rgba(19, 45, 53, .1);
-  --font-body: var(--font-manrope), "Segoe UI", sans-serif;
-  --font-display: var(--font-manrope), "Segoe UI", sans-serif;
-  --weight-body: 450;
+  --font-body: var(--font-montserrat), "Segoe UI", sans-serif;
+  --font-display: var(--font-montserrat), "Segoe UI", sans-serif;
+  --weight-body: 500;
   --weight-label: 700;
   --weight-display: 780;
   --radius-sm: 10px;
@@ -121,7 +121,8 @@ h1 { font-family: var(--font-display); font-size: clamp(38px, 6vw, 70px); font-w
 .clinic-story { align-items: center; background: linear-gradient(135deg, #edf8f6, #fff); border: 1px solid var(--color-line); border-radius: 28px; display: grid; gap: clamp(28px, 5vw, 70px); grid-template-columns: .62fr 1.38fr; margin: 92px auto 0; max-width: var(--content-width); overflow: hidden; padding: 18px; }
 .clinic-story-copy { padding: clamp(28px, 4vw, 54px); }
 .clinic-story-copy h2 { font-size: clamp(30px, 4vw, 49px); letter-spacing: -.045em; line-height: 1.08; margin: 0 0 18px; }
-.clinic-story-copy > p:not(.section-label) { color: var(--color-ink-soft); font-size: 13px; line-height: 1.75; margin: 0 0 25px; }
+.site-shell .clinic-story-copy > p:not(.section-label) { color: var(--color-ink-soft); font-size: 18px !important; font-weight: 550; line-height: 1.65 !important; margin: 0 0 25px; max-width: 540px; }
+.site-shell .clinic-story-copy > .text-link { font-size: 16px !important; font-weight: 800; letter-spacing: .01em; }
 .clinic-gallery { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
 .clinic-gallery-image { aspect-ratio: 4 / 3; border-radius: 18px; box-shadow: 0 16px 38px rgba(19,45,53,.1); overflow: hidden; position: relative; }
 .clinic-gallery-image:first-child { aspect-ratio: 16 / 7; grid-column: 1 / -1; }
@@ -248,9 +249,9 @@ h1 { font-family: var(--font-display); font-size: clamp(38px, 6vw, 70px); font-w
 .service-image { display: block; height: 230px; overflow: hidden; position: relative; }
 .service-image img { object-fit: cover; transition: transform .45s ease; }
 .service-card:hover .service-image img { transform: scale(1.035); }
-.service-card-copy { padding: 25px 26px 27px; }
+.service-card-copy { padding: 22px 24px; }
 .service-number { color: var(--color-teal-dark); font-size: 10px; font-weight: 800; letter-spacing: .14em; margin-bottom: 12px; }
-.service-card h2 { font-size: 21px; letter-spacing: -.025em; margin-bottom: 10px; }
+.service-card h2 { font-size: 22px; font-weight: 700; letter-spacing: -.025em; line-height: 1.35; margin: 0; }
 .service-card h2 a:hover { color: var(--color-teal-dark); }
 .service-card-copy > p:not(.service-number) { color: var(--color-ink-soft); font-size: 13px; line-height: 1.65; margin-bottom: 22px; min-height: 43px; }
 .service-link, .text-link { align-items: center; color: var(--color-teal-dark); display: inline-flex; font-size: 12px; font-weight: 800; gap: 8px; }
@@ -272,11 +273,17 @@ h1 { font-family: var(--font-display); font-size: clamp(38px, 6vw, 70px); font-w
 .service-detail-image { border-radius: 24px 0 0 24px; min-height: 540px; overflow: hidden; position: relative; }
 .service-detail-image img { object-fit: cover; }
 .service-overview { display: grid; gap: clamp(50px, 8vw, 110px); grid-template-columns: 1.05fr .95fr; margin: 105px auto; max-width: var(--content-width); padding: 0 var(--page-gutter); }
+.service-overview-compact { display: block; margin-block: 78px; max-width: 760px; }
 .service-prose h2 { font-size: clamp(30px, 3.6vw, 46px); letter-spacing: -.04em; line-height: 1.08; margin-bottom: 26px; }
 .service-prose > p:not(.section-label) { color: var(--color-ink-soft); font-size: 15px; line-height: 1.85; margin-bottom: 18px; }
+.service-more { border-top: 1px solid var(--color-line); margin-top: 22px; padding-top: 16px; }
+.service-more summary { color: var(--color-teal-dark); cursor: pointer; font-size: 15px; font-weight: 750; list-style-position: inside; }
+.service-more[open] summary { margin-bottom: 14px; }
+.service-more p { color: var(--color-ink-soft); margin-bottom: 0; }
 .service-facts { background: var(--color-surface); border: 1px solid var(--color-line); border-radius: 20px; box-shadow: 0 16px 45px rgba(19,45,53,.065); display: grid; gap: 27px; padding: 32px; }
 .service-facts > div + div { border-top: 1px solid var(--color-line); padding-top: 27px; }
 .service-facts h2 { font-size: 16px; margin-bottom: 17px; }
+.service-overview-compact .service-facts h2 { font-size: 20px; font-weight: 750; }
 .service-facts ul { display: grid; gap: 12px; list-style: none; margin: 0; padding: 0; }
 .service-facts li { align-items: flex-start; color: var(--color-ink-soft); display: flex; font-size: 12px; gap: 10px; line-height: 1.5; }
 .service-facts li svg { background: var(--color-teal-soft); border-radius: 50%; fill: none; flex: 0 0 auto; height: 19px; padding: 4px; stroke: var(--color-teal-dark); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2; width: 19px; }
@@ -284,7 +291,7 @@ h1 { font-family: var(--font-display); font-size: clamp(38px, 6vw, 70px); font-w
 .process-heading { display: grid; gap: 50px; grid-template-columns: .45fr 1fr; margin: 0 auto 50px; max-width: var(--content-width); }
 .process-heading .section-label { color: var(--color-teal); }
 .process-heading h2 { font-size: clamp(30px, 4vw, 48px); letter-spacing: -.04em; line-height: 1.1; margin: 0; max-width: 730px; }
-.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0 auto; max-width: var(--content-width); }
+.process-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin: 0 auto; max-width: var(--content-width); }
 .process-grid article { border-left: 1px solid rgba(255,255,255,.15); padding: 4px 28px 5px; }
 .process-grid article:last-child { border-right: 1px solid rgba(255,255,255,.15); }
 .process-grid span { color: var(--color-teal); font-size: 10px; font-weight: 800; letter-spacing: .13em; }
@@ -681,6 +688,10 @@ h1 { font-family: var(--font-display); font-size: clamp(38px, 6vw, 70px); font-w
   .drawer-section a > svg { height: 13px; width: 13px; }
   .drawer-section a.is-active { background: var(--color-teal-soft); border-color: #add7d7; padding-left: 11px; }
   .drawer-section a:hover { border-color: #add7d7; padding-left: 11px; transform: translateY(-1px); }
+  .drawer-nav-standard { border: 0; display: flex; flex-direction: column; gap: 9px; }
+  .drawer-nav-standard a { align-items: center; background: white; border: 1px solid var(--color-line); border-radius: var(--radius-pill); color: var(--color-ink-soft); display: flex; font-size: 15px; font-weight: 700; grid-template-columns: none; min-height: 50px; padding: 0 18px; }
+  .drawer-nav-standard a.is-active { background: var(--color-teal-soft); border-color: #add7d7; color: var(--color-teal-dark); padding-left: 18px; }
+  .drawer-nav-standard a:hover { background: var(--color-teal-soft); border-color: #add7d7; color: var(--color-teal-dark); padding-left: 18px; transform: translateY(-1px); }
   .mobile-header-action { transition: background .25s ease, border-color .25s ease, transform .25s ease; }
   .mobile-header-action:hover { background: var(--color-teal-soft); border-color: #abd3d2; transform: translateY(-2px); }
   .drawer-footer { margin-top: auto; }
@@ -1067,4 +1078,106 @@ h1 { font-family: var(--font-display); font-size: clamp(38px, 6vw, 70px); font-w
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
+
+/* Site-wide readability baseline. Keep essential copy at a comfortable reading size. */
+html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+body { line-height: 1.65; text-rendering: optimizeLegibility; }
+.site-shell main p:not(.section-label, .service-number, .footer-kicker),
+.site-shell main li,
+.site-shell main blockquote { font-size: 16px !important; font-weight: 500; line-height: 1.7 !important; }
+.site-shell main small { font-size: 14px !important; line-height: 1.55 !important; }
+.site-shell h1, .site-shell h2, .site-shell h3 { line-height: 1.14; letter-spacing: -.025em; text-wrap: balance; }
+.site-shell p, .site-shell li, .site-shell blockquote { text-wrap: pretty; }
+
+/* Labels and actions remain visually distinct without becoming hard to read. */
+.site-shell .eyebrow,
+.site-shell .section-label,
+.site-shell .service-number,
+.site-shell .therapist-role,
+.site-shell .contact-socials > p,
+.site-shell .contact-card div > p,
+.site-shell .legal-index > p,
+.site-shell .process-grid > article > span,
+.site-shell .safety-protocol-grid article > span,
+.site-shell .home-visit-value-grid article > span,
+.site-shell .home-visit-process article > span,
+.site-shell .women-care-options article > span { font-size: 13px !important; line-height: 1.45; letter-spacing: .1em; }
+.site-shell .button,
+.site-shell .text-link,
+.site-shell .service-link,
+.site-shell .therapist-button,
+.site-shell .form-submit { font-size: 15px !important; }
+
+/* Text held in non-paragraph elements. */
+.feature span,
+.patient-groups span,
+.screening-list span,
+.coverage-list strong,
+.therapist-details li,
+.contact-card div > span,
+.form-grid label > span { font-size: 15px !important; line-height: 1.6; }
+.form-grid input, .form-grid select, .form-grid textarea { font-size: 16px; line-height: 1.5; }
+.related-grid strong, .related-grid small { font-size: 14px !important; line-height: 1.55; }
+.review-card-top h3 { font-size: 15px; }
+.review-card-top p, .reviews-source-note, .form-note { font-size: 13px !important; line-height: 1.55 !important; }
+
+/* Improve text contrast on dark panels. */
+.google-review-feature p,
+.home-service-banner > div:last-child > p:not(.section-label),
+.process-grid p,
+.team-cta div > p:last-child,
+.coverage-copy > p:not(.section-label),
+.safety-protocol-heading > p:last-child,
+.safety-protocol-grid p,
+.women-care-banner div > p:last-child,
+.women-privacy-section > div:first-child > p:last-child { color: rgba(255,255,255,.84) !important; }
+
+/* Header, mobile navigation, and footer typography. */
+.header-ribbon p, .header-ribbon > a { font-size: 12px; }
+.brand-name small { font-size: 12px; line-height: 1.35; }
+.topnav a, .header-cta { font-size: 14px; }
+.drawer-label, .drawer-nav a > span, .drawer-section h2 span { font-size: 12px; }
+.drawer-section a, .drawer-footer p { font-size: 14px; line-height: 1.5; }
+.contact-card-featured div > span { color: rgba(255,255,255,.86); }
+.footer-brand .brand-name small { color: rgba(255,255,255,.76); }
+.footer-brand > p, .footer-contact > p:not(.footer-kicker) { color: rgba(255,255,255,.82); font-size: 15px; }
+.footer-column h2, .footer-contact .footer-kicker { color: rgba(255,255,255,.7); font-size: 13px; }
+.footer-column a, .footer-socials a, .footer-contact-links a, .footer-button { color: rgba(255,255,255,.9); font-size: 14px; line-height: 1.5; }
+.footer-bottom p, .footer-bottom nav a { color: rgba(255,255,255,.72); font-size: 13px; line-height: 1.5; }
+
+/* Mobile reading mode: larger text, shorter cards, and no clipped copy. */
+@media (max-width: 700px) {
+  .site-shell main p:not(.section-label, .service-number, .footer-kicker),
+  .site-shell main li,
+  .site-shell main blockquote { font-size: 17px !important; line-height: 1.68 !important; }
+  .site-shell main small { font-size: 15px !important; }
+  .site-shell .eyebrow,
+  .site-shell .section-label,
+  .site-shell .service-number,
+  .site-shell .therapist-role { font-size: 14px !important; }
+  .site-shell .button,
+  .site-shell .text-link,
+  .site-shell .therapist-button,
+  .site-shell .form-submit { font-size: 16px !important; }
+  .site-shell h1, .site-shell h2, .site-shell h3 { hyphens: auto; overflow-wrap: break-word; }
+  .feature span,
+  .patient-groups span,
+  .screening-list span,
+  .coverage-list strong,
+  .therapist-details li,
+  .contact-card div > span,
+  .form-grid label > span { font-size: 16px !important; }
+
+  .service-card { grid-template-columns: 116px minmax(0, 1fr); min-height: 118px; }
+  .service-image { min-height: 118px; }
+  .service-card-copy { padding: 18px; }
+  .service-card h2 { font-size: 19px; font-weight: 750; line-height: 1.35; margin: 0; }
+  .service-card-copy > p:not(.service-number), .service-card .service-link { display: none; }
+  .service-breadcrumb { font-size: 14px; line-height: 1.5; overflow-wrap: anywhere; }
+  .service-more summary { font-size: 16px; min-height: 44px; padding-block: 10px; }
+  .related-heading { align-items: stretch; flex-direction: column; }
+  .related-heading .text-link { margin-top: 0; white-space: normal; }
+  .related-grid > a { grid-template-columns: 72px minmax(0, 1fr) 18px; }
+  .related-grid strong { font-size: 16px !important; line-height: 1.4; margin: 0; }
 }

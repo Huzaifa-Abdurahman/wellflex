@@ -36,10 +36,7 @@ export default function ServicesPage() {
             <Image src={service.image} alt={service.imageAlt} fill sizes="(max-width: 700px) 34vw, (max-width: 1050px) 50vw, 33vw" priority={group.label.startsWith("Physiotherapy") && index < 3} />
           </Link>
           <div className="service-card-copy">
-            <p className="service-number">{String(index + 1).padStart(2, "0")}</p>
             <h2><Link href={`/services/${service.slug}`}>{service.title}</Link></h2>
-            <p>{service.description}</p>
-            <Link className="service-link" href={`/services/${service.slug}`}>Learn more <ArrowIcon /></Link>
           </div>
         </article>)}
       </div>

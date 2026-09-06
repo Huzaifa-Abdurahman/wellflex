@@ -18,7 +18,7 @@ export function ContactForm() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const message = [
-      "Hello Flex Well, I would like to enquire about an appointment.",
+      "Hello Flex Well Physiotherapy Center, I would like to enquire about an appointment.",
       "",
       `Name: ${data.get("name")}`,
       `Phone: ${data.get("phone")}`,
