@@ -129,7 +129,7 @@ export const services: Service[] = [
     slug: "orthopaedic-physiotherapy",
     title: "Orthopaedic Physiotherapy",
     description: "Assessment and rehabilitation for bone, joint, muscle and tendon concerns.",
-    image: "/manual-therapy.jpg",
+    image: "/Orthopaedic Physiotherapy.jfif",
     imageAlt: "Physiotherapist assessing a patient's joint movement",
     introduction: [
       "Orthopaedic physiotherapy supports people affected by pain, injury, stiffness or reduced function involving muscles, joints, tendons and ligaments. Care begins with understanding the activities that have become difficult and identifying the physical factors relevant to them.",
@@ -148,7 +148,7 @@ export const services: Service[] = [
     slug: "neurological-physiotherapy",
     title: "Neurological Physiotherapy",
     description: "Goal-led movement and mobility support for neurological conditions.",
-    image: "/rehabillation.jpg",
+    image: "/Neurological Physiotherapy.jfif",
     imageAlt: "Therapist supporting a patient during walking rehabilitation",
     introduction: [
       "Neurological physiotherapy helps people whose movement, balance, strength or coordination has been affected by a condition involving the brain, spinal cord or nerves. Assessment considers the person as a whole, including mobility, transfers, fatigue, confidence and the support available at home.",
@@ -167,7 +167,7 @@ export const services: Service[] = [
     slug: "paediatric-physiotherapy",
     title: "Paediatric Physiotherapy",
     description: "Child-centred movement support developed with families and clinical guidance.",
-    image: "/exercise-therapy.jpg",
+    image: "/Paediatric Physiotherapy.jfif",
     imageAlt: "Physiotherapist guiding supported movement practice",
     introduction: [
       "Paediatric physiotherapy supports children whose movement, balance, strength or physical development affects play and everyday participation. Care should be age-appropriate, engaging and developed in partnership with parents or caregivers.",
@@ -186,7 +186,7 @@ export const services: Service[] = [
     slug: "older-adult-physiotherapy",
     title: "Older Adult Physiotherapy",
     description: "Practical support for strength, balance, mobility and everyday independence.",
-    image: "/rehabillation.jpg",
+    image: "/Older Adult Physiotherapy.jfif",
     imageAlt: "Older adult practising mobility with a physiotherapist",
     introduction: [
       "Physiotherapy for older adults focuses on the abilities that protect independence: getting up, walking, using stairs, maintaining balance and completing everyday activities with confidence. Plans account for health conditions, medicines, fatigue and the person's usual environment.",
@@ -224,7 +224,7 @@ export const services: Service[] = [
     slug: "dry-needling",
     title: "Dry Needling",
     description: "A needle-based technique considered only after assessment and informed consent.",
-    image: "/manual-therapy.jpg",
+    image: "/needling.jpg",
     imageAlt: "Clinical physiotherapy treatment setting",
     introduction: [
       "Dry needling uses a fine, sterile needle without medication and may be considered for selected muscle-related pain and movement concerns. It is different from acupuncture and should form only one part of a broader rehabilitation plan.",
@@ -262,7 +262,7 @@ export const services: Service[] = [
     slug: "dry-cupping",
     title: "Dry Cupping",
     description: "Non-incisional cupping offered as an optional complementary wellness practice.",
-    image: "/hajjama.jpg",
+    image: "/hajjama-dry-cupping.PNG",
     imageAlt: "Dry cupping equipment in a treatment room",
     introduction: [
       "Dry cupping creates suction on the skin without making incisions. Some people choose it for relaxation or as part of a personal wellness routine, although strong evidence for treating health conditions is limited.",
@@ -281,7 +281,7 @@ export const services: Service[] = [
     slug: "sunnah-hijama",
     title: "Sunnah Hijama",
     description: "Faith-sensitive Hijama care delivered with clinical screening and honest guidance.",
-    image: "/hajjama-cupping.jpg",
+    image: "/hajjama-male.jfif",
     imageAlt: "Hijama cups arranged for traditional wellness care",
     introduction: [
       "Many Muslims choose Hijama because of its place in Islamic tradition. We respect that motivation while maintaining the same consultation, consent, hygiene and suitability standards used for every wet-cupping appointment.",
