@@ -130,7 +130,7 @@ export function Footer() {
           <span className="brand-logo"><Image src="/logo.jpg" alt="" width={64} height={64} /></span>
           <span className="brand-name">Flex Well<small>Physiotherapy &amp; Hijama Center</small></span>
         </Link>
-        <p>Helping Islamabad move with less pain, greater confidence, and lasting strength through thoughtful one-to-one care.</p>
+        <p>Helping Islamabad move with less pain and more confidence.</p>
         <div className="footer-socials">
           <a href={siteConfig.social.instagram} target="_blank" rel="noreferrer" aria-label="Flex Well on Instagram">Instagram</a>
           <a href={siteConfig.social.facebook} target="_blank" rel="noreferrer" aria-label="Flex Well on Facebook">Facebook</a>
@@ -179,6 +179,46 @@ export function Footer() {
   </footer>;
 }
 
+function ScrollReveal() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const elements = Array.from(document.querySelectorAll<HTMLElement>([
+      "main > section",
+      "main > aside",
+      "main section > article",
+      "main .service-card",
+      "main .contact-card",
+      "main .info-card",
+      ".site-footer .footer-inner > *",
+    ].join(",")));
+
+    document.documentElement.classList.add("scroll-motion-ready");
+    elements.forEach((element, index) => {
+      element.classList.add("scroll-reveal", `scroll-reveal-delay-${index % 4}`);
+    });
+
+    if (reducedMotion || !("IntersectionObserver" in window)) {
+      elements.forEach((element) => element.classList.add("is-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: "0px 0px -9%", threshold: 0.08 });
+
+    elements.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, [pathname]);
+
+  return null;
+}
+
 export function PageShell({ children }: { children: React.ReactNode }) {
-  return <div className="site-shell"><Header />{children}<Footer /></div>;
+  return <div className="site-shell"><ScrollReveal /><Header />{children}<Footer /></div>;
 }

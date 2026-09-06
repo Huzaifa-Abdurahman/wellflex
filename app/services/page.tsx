@@ -18,14 +18,14 @@ export default function ServicesPage() {
     <section className="services-intro">
       <div>
         <p className="section-label">Our services</p>
-        <h1>Care designed around how you want to live.</h1>
+        <h1>Care built around you.</h1>
       </div>
-      <p>From pain relief and rehabilitation to traditional Hijama care, every service begins with a conversation and a plan tailored to you.</p>
+      <p>Physiotherapy, rehabilitation and Hijama care.</p>
     </section>
 
     <section className="home-service-banner">
-      <div className="home-service-banner-image"><Image src="/rehabillation.jfif" alt="Physiotherapist supporting a patient during rehabilitation" fill sizes="(max-width: 700px) 100vw, 40vw" /></div>
-      <div><p className="section-label">Care at your doorstep</p><h2>Home physiotherapy across Islamabad &amp; Rawalpindi.</h2><p>Personalised assessment and rehabilitation for people who find travelling to the clinic difficult.</p><Link className="button button-primary" href="/home-physiotherapy">Explore home visits <ArrowIcon /></Link></div>
+      <div className="home-service-banner-image"><Image src="/home-visits-v2.png" alt="Physiotherapist guiding an older patient through an exercise at home" fill sizes="(max-width: 700px) 100vw, 40vw" /></div>
+      <div><p className="section-label">Care at your doorstep</p><h2>Home physiotherapy.</h2><p>Personal rehabilitation across Islamabad and Rawalpindi.</p><Link className="button button-primary" href="/home-physiotherapy">Explore home visits <ArrowIcon /></Link></div>
     </section>
 
     {serviceGroups.map((group) => <section className="service-group" key={group.label}>
@@ -45,7 +45,7 @@ export default function ServicesPage() {
       </div>
     </section>)}
 
-    <section className="women-care-banner"><div><p className="section-label">Care for women</p><h2>Female physiotherapy &amp; Hijama appointments.</h2><p>Respectful, private care with female-practitioner availability confirmed when you book.</p></div><Link className="button button-light" href="/women-care">Explore women&apos;s care <ArrowIcon /></Link></section>
+    <section className="women-care-banner"><div><p className="section-label">Care for women</p><h2>Female physiotherapy &amp; Hijama.</h2><p>Private, respectful care.</p></div><Link className="button button-light" href="/women-care">Explore women&apos;s care <ArrowIcon /></Link></section>
 
     <section className="services-cta">
       <div><p className="section-label">Not sure where to start?</p><h2>Tell us what is holding you back.</h2></div>

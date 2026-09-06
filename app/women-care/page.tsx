@@ -38,22 +38,22 @@ export default function WomenCarePage() {
 
   return <PageShell><main className="women-care-page">
     <section className="women-care-hero">
-      <div className="women-care-copy"><p className="section-label">For women</p><h1>Care that respects your comfort and privacy.</h1><p>Ask about female physiotherapy and female Hijama appointments in a calm, professional environment at Flex Well, DHA Phase 2.</p><div><Link className="button button-primary" href={bookingUrl} target="_blank" rel="noreferrer">Book with a female practitioner <ArrowIcon /></Link><a className="text-link" href="tel:+923097708828">Call the clinic</a></div><small>Female-practitioner availability is confirmed when your appointment is arranged.</small></div>
-      <div className="women-care-image"><Image src="/hajjama.jfif" alt="Hijama treatment equipment prepared in a calm clinical setting" fill priority sizes="(max-width: 800px) 100vw, 50vw" /><span>Private • respectful • patient-led</span></div>
+      <div className="women-care-copy"><p className="section-label">For women</p><h1>Private, respectful care.</h1><p>Female physiotherapy and Hijama in DHA Phase 2.</p><div><Link className="button button-primary" href={bookingUrl} target="_blank" rel="noreferrer">Book with a female practitioner <ArrowIcon /></Link><a className="text-link" href="tel:+923097708828">Call the clinic</a></div><small>Availability is confirmed when you book.</small></div>
+      <div className="women-care-image"><Image src="/female-hijama-v2.png" alt="Female Hijama practitioner providing careful cupping treatment in a private clinic room" fill priority sizes="(max-width: 800px) 100vw, 50vw" /><span>Private • respectful • patient-led</span></div>
     </section>
 
-    <section className="women-care-intro"><p className="section-label">Women&apos;s health &amp; wellbeing</p><h2>Professional support without compromising personal comfort.</h2><p>Some women feel more comfortable discussing symptoms or receiving hands-on treatment from a female practitioner. We make that preference easy to communicate, then confirm the right practitioner, service and appointment time before your visit.</p></section>
+    <section className="women-care-intro"><p className="section-label">Women&apos;s health &amp; wellbeing</p><h2>Professional care. Personal comfort.</h2><p>Tell us your preference. We will confirm the right practitioner and time.</p></section>
 
     <section className="women-care-options">{careOptions.map((option, index) => <article key={option.title}><span>{String(index + 1).padStart(2, "0")}</span><h2>{option.title}</h2><p>{option.text}</p></article>)}</section>
 
     <section className="women-privacy-section">
-      <div><p className="section-label">Your comfort matters</p><h2>What you can expect.</h2><p>Care should feel safe, understandable and respectful from the first message to the end of your appointment.</p></div>
+      <div><p className="section-label">Your comfort matters</p><h2>What to expect.</h2><p>Safe, clear and respectful care.</p></div>
       <div className="women-privacy-list">{privacyPromises.map((promise) => <div key={promise}><CheckIcon /><span>{promise}</span></div>)}</div>
     </section>
 
     <section className="women-practitioner">
       <div className="women-practitioner-mark" aria-hidden="true">A</div>
-      <div><p className="section-label">Meet a female practitioner</p><h2>Ayesha</h2><p>Ayesha offers thoughtful, movement-focused care with an emphasis on clear communication, personalised exercise, mobility and patient confidence.</p><Link className="text-link" href="/therapists">View therapist profile <ArrowIcon /></Link></div>
+      <div><p className="section-label">Meet a female practitioner</p><h2>Ayesha</h2><p>Movement-focused care with clear guidance.</p><Link className="text-link" href="/therapists">View therapist profile <ArrowIcon /></Link></div>
       <Link className="button button-primary" href={bookingUrl} target="_blank" rel="noreferrer">Request an appointment <ArrowIcon /></Link>
     </section>
 

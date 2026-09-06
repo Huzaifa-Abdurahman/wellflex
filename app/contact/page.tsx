@@ -26,19 +26,19 @@ function ArrowIcon() {
 export default function ContactPage() {
   return <PageShell><main className="contact-page">
     <section className="contact-hero">
-      <div><p className="section-label">Contact Flex Well</p><h1>Let&apos;s plan your next step.</h1></div>
-      <p>Whether you are ready to book or simply need guidance, our clinic team is here to help you find the right place to begin.</p>
+      <div><p className="section-label">Contact Flex Well</p><h1>Plan your next step.</h1></div>
+      <p>Book a visit or ask our team a question.</p>
     </section>
 
     <section className="contact-layout">
       <div className="contact-info-column"><div className="contact-details">
         <div className="contact-card contact-card-featured">
           <ContactIcon type="whatsapp" />
-          <div><p>Fastest response</p><h2>Chat on WhatsApp</h2><span>Ask about availability, services or your first appointment.</span><a href={siteConfig.whatsapp} target="_blank" rel="noreferrer">Start a conversation <ArrowIcon /></a></div>
+          <div><p>Fastest response</p><h2>Chat on WhatsApp</h2><span>Ask about services or availability.</span><a href={siteConfig.whatsapp} target="_blank" rel="noreferrer">Start a conversation <ArrowIcon /></a></div>
         </div>
         <div className="contact-card">
           <ContactIcon type="phone" />
-          <div><p>Call the clinic</p><h2>{siteConfig.phoneDisplay}</h2><span>Speak directly with our team during clinic hours.</span><a href={siteConfig.phoneHref}>Call now <ArrowIcon /></a></div>
+          <div><p>Call the clinic</p><h2>{siteConfig.phoneDisplay}</h2><span>Speak directly with our team.</span><a href={siteConfig.phoneHref}>Call now <ArrowIcon /></a></div>
         </div>
         <div className="contact-card">
           <ContactIcon type="email" />

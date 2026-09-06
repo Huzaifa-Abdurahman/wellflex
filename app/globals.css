@@ -35,8 +35,22 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 svg { display: block; }
 .site-shell { min-height: 100vh; overflow: hidden; }
 
+/* Site-wide load and scroll motion */
+.scroll-motion-ready .scroll-reveal { filter: blur(3px); opacity: 0; transform: translateX(-42px); transition: filter .7s ease, opacity .7s ease, transform .8s cubic-bezier(.2,.75,.25,1); }
+.scroll-motion-ready .scroll-reveal.is-visible { filter: blur(0); opacity: 1; transform: translateX(0); }
+.scroll-reveal-delay-1 { transition-delay: .07s !important; }
+.scroll-reveal-delay-2 { transition-delay: .14s !important; }
+.scroll-reveal-delay-3 { transition-delay: .21s !important; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .scroll-motion-ready .scroll-reveal { filter: none; opacity: 1; transform: none; transition: none; }
+  .site-header { animation: none !important; }
+  .review-carousel-card { animation: none; }
+}
+
 /* Header */
-.site-header { background: rgba(255,255,255,.96); border-bottom: 1px solid var(--color-line); position: relative; z-index: 15; }
+.site-header { animation: navbar-drop-in .72s cubic-bezier(.2,.8,.25,1) both; background: rgba(255,255,255,.96); border-bottom: 1px solid var(--color-line); position: relative; z-index: 15; }
+@keyframes navbar-drop-in { from { opacity: 0; transform: translateY(-100%); } to { opacity: 1; transform: translateY(0); } }
 .header-ribbon { align-items: center; background: var(--color-ink); color: rgba(255,255,255,.78); display: flex; height: 31px; justify-content: space-between; padding: 0 var(--page-gutter); }
 .header-ribbon p, .header-ribbon > a { align-items: center; display: flex; font-size: 10px; font-weight: 650; letter-spacing: .055em; margin: 0; text-transform: uppercase; }
 .header-ribbon > a { transition: color .2s ease; }
@@ -104,6 +118,16 @@ h1 { font-family: var(--font-display); font-size: clamp(38px, 6vw, 70px); font-w
 .care-journey-steps h3 { font-size: 16px; margin: 0 0 7px; }
 .care-journey-steps p { color: var(--color-ink-soft); font-size: 11px; line-height: 1.65; margin: 0; }
 .care-journey > .text-link { bottom: 43px; left: clamp(42px, 6vw, 76px); position: absolute; }
+.clinic-story { align-items: center; background: linear-gradient(135deg, #edf8f6, #fff); border: 1px solid var(--color-line); border-radius: 28px; display: grid; gap: clamp(28px, 5vw, 70px); grid-template-columns: .62fr 1.38fr; margin: 92px auto 0; max-width: var(--content-width); overflow: hidden; padding: 18px; }
+.clinic-story-copy { padding: clamp(28px, 4vw, 54px); }
+.clinic-story-copy h2 { font-size: clamp(30px, 4vw, 49px); letter-spacing: -.045em; line-height: 1.08; margin: 0 0 18px; }
+.clinic-story-copy > p:not(.section-label) { color: var(--color-ink-soft); font-size: 13px; line-height: 1.75; margin: 0 0 25px; }
+.clinic-gallery { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+.clinic-gallery-image { aspect-ratio: 4 / 3; border-radius: 18px; box-shadow: 0 16px 38px rgba(19,45,53,.1); overflow: hidden; position: relative; }
+.clinic-gallery-image:first-child { aspect-ratio: 16 / 7; grid-column: 1 / -1; }
+.clinic-gallery-image img { object-fit: cover; transition: transform .45s ease; }
+.clinic-gallery-image:nth-child(2) img { object-position: center 38%; }
+.clinic-gallery-image:hover img { transform: scale(1.025); }
 .reviews-section { isolation: isolate; margin: 120px auto 35px; max-width: var(--content-width); position: relative; }
 .reviews-section::before, .reviews-section::after { border-radius: 50%; content: ""; filter: blur(7px); pointer-events: none; position: absolute; z-index: -1; }
 .reviews-section::before { background: rgba(7,150,126,.28); height: 260px; right: -55px; top: 120px; width: 260px; }
@@ -133,6 +157,26 @@ h1 { font-family: var(--font-display); font-size: clamp(38px, 6vw, 70px); font-w
 .google-review-actions .button { box-shadow: 0 13px 30px rgba(5,46,40,.2); min-height: 54px; padding-inline: 25px; white-space: nowrap; }
 .google-review-actions .text-link { color: rgba(255,255,255,.8); font-size: 10px; justify-content: center; }
 .google-review-actions .text-link:hover { color: white; }
+.google-review-card { background: rgba(255,255,255,.92); border: 1px solid rgba(255,255,255,.96); border-radius: 19px; box-shadow: 0 18px 45px rgba(10,71,63,.1); min-height: 230px; padding: 24px; transition: box-shadow .25s ease, transform .25s ease; }
+.google-review-card:hover { box-shadow: 0 24px 50px rgba(10,71,63,.16); transform: translateY(-4px); }
+.review-card-top { align-items: center; display: grid; gap: 12px; grid-template-columns: auto 1fr auto; }
+.review-avatar { align-items: center; background: var(--color-teal-soft); border-radius: 50%; color: var(--color-teal-dark); display: flex; font-size: 14px; font-weight: 800; height: 42px; justify-content: center; width: 42px; }
+.review-card-top h3 { font-size: 13px; margin: 0 0 3px; text-transform: capitalize; }
+.review-card-top p { color: var(--color-ink-soft); font-size: 9px; margin: 0; }
+.review-google-mark svg { height: 24px; width: 24px; }
+.review-card-stars { color: #fbbc04; font-size: 15px; letter-spacing: 2px; margin: 21px 0 14px; }
+.google-review-card blockquote { color: var(--color-ink); font-size: 12px; line-height: 1.75; margin: 0; }
+.review-carousel { margin: 24px auto 0; max-width: 760px; }
+.review-carousel-card { animation: review-carousel-in .55s cubic-bezier(.2,.75,.25,1) both; min-height: 220px; padding: clamp(24px, 4vw, 38px); }
+.review-carousel-card blockquote { font-size: clamp(13px, 1.4vw, 16px); max-width: 650px; }
+.review-carousel-controls { align-items: center; display: flex; gap: 18px; justify-content: center; margin-top: 17px; }
+.review-carousel-controls > button { align-items: center; background: white; border: 1px solid var(--color-line); border-radius: 50%; color: var(--color-ink); cursor: pointer; display: flex; font-size: 15px; height: 38px; justify-content: center; transition: border-color .2s ease, color .2s ease, transform .2s ease; width: 38px; }
+.review-carousel-controls > button:hover { border-color: var(--color-teal); color: var(--color-teal-dark); transform: translateY(-2px); }
+.review-carousel-dots { align-items: center; display: flex; gap: 7px; }
+.review-carousel-dots button { background: #bdd7d4; border: 0; border-radius: 999px; cursor: pointer; height: 7px; padding: 0; transition: background .25s ease, width .25s ease; width: 7px; }
+.review-carousel-dots button.is-active { background: var(--color-teal); width: 24px; }
+@keyframes review-carousel-in { from { opacity: 0; transform: translateX(22px); } to { opacity: 1; transform: translateX(0); } }
+.reviews-source-note { color: var(--color-ink-soft); font-size: 9px; line-height: 1.6; margin: 14px 4px 0; text-align: right; }
 
 /* Inner pages */
 .page-main { padding: 72px var(--page-gutter) 96px; }
@@ -274,10 +318,12 @@ h1 { font-family: var(--font-display); font-size: clamp(38px, 6vw, 70px); font-w
 .therapist-profile:nth-child(even) .therapist-portrait { grid-column: 2; grid-row: 1; }
 .therapist-profile:nth-child(even) .therapist-copy { grid-column: 1; grid-row: 1; }
 .therapist-portrait { align-items: center; background: linear-gradient(150deg, var(--color-teal-soft), #ccebec); display: flex; flex-direction: column; justify-content: center; overflow: hidden; position: relative; }
-.therapist-portrait::before, .therapist-portrait::after { border: 1px solid rgba(6,117,128,.17); border-radius: 50%; content: ""; position: absolute; }
+.therapist-portrait::before, .therapist-portrait::after { content: none; }
 .therapist-portrait::before { height: 340px; right: -155px; top: -100px; width: 340px; }
 .therapist-portrait::after { bottom: -135px; height: 290px; left: -120px; width: 290px; }
 .therapist-portrait-2 { background: linear-gradient(150deg, #eef8f5, #d8eee7); }
+.therapist-portrait img { height: 100%; object-fit: cover; object-position: center 34%; width: 100%; }
+.therapist-portrait-2 img { object-position: center 25%; }
 .therapist-portrait span { align-items: center; background: var(--color-surface); border: 1px solid rgba(6,117,128,.2); border-radius: 50%; box-shadow: 0 18px 45px rgba(19,45,53,.13); color: var(--color-teal-dark); display: flex; font-size: 46px; font-weight: 780; height: 150px; justify-content: center; letter-spacing: -.05em; position: relative; width: 150px; z-index: 1; }
 .therapist-portrait small { color: var(--color-teal-dark); font-size: 9px; font-weight: 800; letter-spacing: .2em; margin-top: 23px; position: relative; text-transform: uppercase; z-index: 1; }
 .therapist-copy { align-self: center; padding: 48px clamp(35px, 5vw, 72px); }
@@ -308,6 +354,19 @@ h1 { font-family: var(--font-display); font-size: clamp(38px, 6vw, 70px); font-w
 .about-image::after { background: linear-gradient(180deg, transparent 70%, rgba(19,45,53,.62)); content: ""; inset: 0; pointer-events: none; position: absolute; }
 .about-image img { object-fit: cover; }
 .about-image > span { bottom: 24px; color: white; font-size: 10px; font-weight: 750; left: 27px; letter-spacing: .12em; position: absolute; text-transform: uppercase; z-index: 1; }
+.about-team { margin: 92px auto 0; max-width: var(--content-width); }
+.about-team-heading { margin-bottom: 28px; text-align: center; }
+.about-team-heading h2 { font-size: clamp(30px, 4vw, 48px); letter-spacing: -.045em; margin: 0; }
+.about-team-grid { display: grid; gap: 22px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.about-team-card { background: white; border: 1px solid var(--color-line); border-radius: 22px; box-shadow: 0 18px 45px rgba(19,45,53,.08); overflow: hidden; transition: box-shadow .3s ease, transform .3s ease; }
+.about-team-card:hover { box-shadow: 0 24px 55px rgba(19,45,53,.14); transform: translateY(-5px); }
+.about-team-image { aspect-ratio: 16 / 10; overflow: hidden; position: relative; }
+.about-team-image img { object-fit: cover; object-position: center 32%; transition: transform .45s ease; }
+.about-team-image-female img { object-position: center 24%; }
+.about-team-card:hover .about-team-image img { transform: scale(1.025); }
+.about-team-card > div:last-child { padding: 22px 25px 24px; }
+.about-team-card h3 { font-size: 20px; margin: 0 0 6px; }
+.about-team-card p { color: var(--color-ink-soft); font-size: 11px; margin: 0; }
 .about-copy h1 { font-size: clamp(40px, 4.7vw, 64px); line-height: 1.02; margin-bottom: 27px; }
 .about-copy > p:not(.section-label) { color: var(--color-ink-soft); font-size: 14px; line-height: 1.75; margin-bottom: 14px; }
 .about-values { background: var(--color-surface); border: 1px solid var(--color-line); border-radius: 18px; box-shadow: 0 14px 38px rgba(19,45,53,.07); display: grid; grid-template-columns: 1fr 1fr; margin-top: 31px; padding: 8px 20px; }
@@ -803,6 +862,11 @@ h1 { font-family: var(--font-display); font-size: clamp(38px, 6vw, 70px); font-w
   .about-values article p { display: none; }
   .about-principles { border-radius: 16px; gap: 32px; margin-top: 48px; padding: 35px 24px; }
   .about-principles > div:first-child h2 { font-size: 29px; }
+  .about-team { margin-top: 48px; }
+  .about-team-heading { margin-bottom: 20px; }
+  .about-team-heading h2 { font-size: 29px; }
+  .about-team-grid { grid-template-columns: 1fr; }
+  .about-team-image { aspect-ratio: 4 / 3; }
   .about-cta { align-items: stretch; flex-direction: column; padding: 55px 8px 10px; text-align: center; }
   .about-cta h2 { font-size: 29px; }
   .about-cta > div:last-child { width: 100%; }
@@ -827,7 +891,7 @@ h1 { font-family: var(--font-display); font-size: clamp(38px, 6vw, 70px); font-w
 }
 
 @media (max-width: 1050px) {
-  .care-journey, .reviews-section { margin-left: var(--page-gutter); margin-right: var(--page-gutter); }
+  .care-journey, .clinic-story, .reviews-section { margin-left: var(--page-gutter); margin-right: var(--page-gutter); }
   .google-review-panel { grid-template-columns: 1fr 1fr; padding: 48px 40px; }
   .google-review-actions { align-items: center; flex-direction: row; grid-column: 1 / -1; justify-content: center; }
 }
@@ -854,6 +918,14 @@ h1 { font-family: var(--font-display); font-size: clamp(38px, 6vw, 70px); font-w
   .care-journey-steps { grid-template-columns: 1fr; }
   .care-journey-steps article { align-items: center; display: grid; gap: 3px 14px; grid-template-columns: 38px 1fr; min-height: 95px; padding: 16px; }
   .care-journey-steps span { grid-row: 1 / 3; margin: 0; }
+  .clinic-story { gap: 8px; grid-template-columns: 1fr; margin: 48px 16px 0; padding: 12px; }
+  .clinic-story-copy { padding: 24px 14px 20px; text-align: center; }
+  .clinic-story-copy h2 { font-size: 30px; }
+  .clinic-story-copy > p:not(.section-label) { font-size: 11px; margin-bottom: 18px; }
+  .clinic-story-copy .text-link { justify-content: center; }
+  .clinic-gallery { gap: 9px; grid-template-columns: 1fr 1fr; }
+  .clinic-gallery-image { border-radius: 15px; }
+  .clinic-gallery-image:first-child { grid-column: 1 / -1; }
   .reviews-section { margin: 65px 16px 20px; }
   .reviews-heading { margin-bottom: 25px; text-align: center; }
   .reviews-heading h2 { font-size: 30px; }
@@ -868,6 +940,9 @@ h1 { font-family: var(--font-display); font-size: clamp(38px, 6vw, 70px); font-w
   .google-review-feature p { font-size: 10px; margin-inline: auto; }
   .google-review-actions { align-items: stretch; flex-direction: column; }
   .google-review-actions .button { width: 100%; }
+  .google-review-card { min-height: 0; padding: 21px; text-align: left; }
+  .review-carousel-card { min-height: 215px; }
+  .reviews-source-note { text-align: center; }
   .footer-bottom nav { justify-content: flex-start; }
   .legal-page { padding: 48px 20px 76px; }
   .legal-hero { padding-bottom: 37px; }

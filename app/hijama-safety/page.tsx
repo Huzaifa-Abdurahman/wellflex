@@ -48,17 +48,17 @@ export default function HijamaSafetyPage() {
   return <PageShell><main className="hijama-safety-page">
     <section className="hijama-safety-hero">
       <div className="hijama-safety-image"><Image src="/hajjama-cupping.jfif" alt="Hijama cups prepared for a wellness treatment" fill priority sizes="(max-width: 800px) 100vw, 50vw" /></div>
-      <div className="hijama-safety-copy"><p className="section-label">Hijama safety &amp; hygiene</p><h1>Your safety is part of the treatment.</h1><p>A professional Hijama experience begins before the first cup is applied. Consultation, informed consent, careful hygiene and responsible aftercare guide every stage.</p><div><Link className="button button-primary" href={bookingUrl} target="_blank" rel="noreferrer">Ask about Hijama <ArrowIcon /></Link><Link className="text-link" href="#safety-protocol">View our protocol</Link></div></div>
+      <div className="hijama-safety-copy"><p className="section-label">Hijama safety &amp; hygiene</p><h1>Safety at every stage.</h1><p>Consultation, consent, hygiene and aftercare.</p><div><Link className="button button-primary" href={bookingUrl} target="_blank" rel="noreferrer">Ask about Hijama <ArrowIcon /></Link><Link className="text-link" href="#safety-protocol">View our protocol</Link></div></div>
     </section>
 
     <section className="safety-intro">
       <p className="section-label">A considered approach</p>
-      <h2>Clean practice. Clear information. Informed choice.</h2>
+      <h2>Clean. Clear. Informed.</h2>
       <p>Hijama involves contact with skin and, in wet cupping, controlled superficial skin incisions. That makes screening and infection-control practices essential—not optional extras. Our published protocol sets out the standard patients should expect at Flex Well.</p>
     </section>
 
     <section className="safety-protocol" id="safety-protocol">
-      <div className="safety-protocol-heading"><p className="section-label">Our 10-step protocol</p><h2>Safety at every stage.</h2><p>From the first health question to the final aftercare instruction.</p></div>
+      <div className="safety-protocol-heading"><p className="section-label">Our 10-step protocol</p><h2>A careful process.</h2><p>From screening to aftercare.</p></div>
       <div className="safety-protocol-grid">{protocol.map((item, index) => <article key={item.title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div>
     </section>
 

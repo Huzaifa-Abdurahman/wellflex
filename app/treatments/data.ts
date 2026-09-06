@@ -186,8 +186,8 @@ export const treatments: Treatment[] = [
     slug: "stroke-rehabilitation",
     title: "Stroke Rehabilitation",
     description: "Individual movement, balance and mobility practice following a stroke.",
-    image: "/rehabillation.jfif",
-    imageAlt: "Patient receiving supported walking practice during rehabilitation",
+    image: "/stroke-rehabilitation-v2.png",
+    imageAlt: "Physiotherapist guiding supported walking practice after stroke",
     overview: [
       "A stroke can affect movement, balance, sensation, coordination, fatigue and confidence in different ways. Physiotherapy is one part of multidisciplinary rehabilitation and should reflect medical guidance, current ability and the person's own priorities.",
       "Sessions may practise bed mobility, transfers, sitting, standing, walking and selected exercises. Suitability for clinic or home care is reviewed individually, and urgent new or worsening stroke symptoms require emergency medical attention.",
@@ -205,8 +205,8 @@ export const treatments: Treatment[] = [
     slug: "knee-replacement-rehabilitation",
     title: "Knee Replacement Rehabilitation",
     description: "Progressive rehabilitation after total or partial knee replacement surgery.",
-    image: "/post-surgery-pain.jfif",
-    imageAlt: "Physiotherapist supporting knee rehabilitation after surgery",
+    image: "/knee-replacement-rehabilitation-v2.png",
+    imageAlt: "Physiotherapist guiding knee movement after replacement surgery",
     overview: [
       "Rehabilitation after knee replacement commonly focuses on safe mobility, knee movement, swelling management, leg strength and a gradual return to everyday tasks. Your surgeon's instructions and individual healing remain the priority.",
       "We review your operation details, precautions and current walking ability before progressing exercises. Unexpected wound changes, calf swelling, chest pain, breathing difficulty or sudden deterioration require prompt medical assessment rather than routine physiotherapy.",
@@ -224,8 +224,8 @@ export const treatments: Treatment[] = [
     slug: "cerebral-palsy-rehabilitation",
     title: "Cerebral Palsy Rehabilitation",
     description: "Individual movement support developed around ability, participation and family goals.",
-    image: "/Exercise Therapy.jfif",
-    imageAlt: "Therapist guiding individual movement and strengthening practice",
+    image: "/cerebral-palsy-rehabilitation-v2.png",
+    imageAlt: "Paediatric physiotherapist supporting standing and balance practice",
     overview: [
       "Cerebral palsy affects each person differently. Physiotherapy may support movement, strength, range, positioning, mobility and participation, but care is often most effective when coordinated with the person's medical, occupational therapy and wider support team.",
       "We review age, diagnosis, current equipment, communication needs and existing clinical recommendations before accepting an appointment. Specialist referral is recommended whenever needs exceed the clinic's expertise or facilities.",

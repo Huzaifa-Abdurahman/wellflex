@@ -37,9 +37,9 @@ export default function AboutPage() {
 
       <div className="about-copy">
         <p className="section-label">About Flex Well</p>
-        <h1>Empowering lives through movement &amp; wellness.</h1>
-        <p>At Flex Well Physiotherapy &amp; Hijama Center, we are dedicated to providing expert, compassionate care that helps you heal, move and thrive.</p>
-        <p>Our goal is to improve your quality of life through personalised treatment, clear guidance and a thoughtful approach to whole-person wellbeing.</p>
+        <h1>Move well. Feel stronger.</h1>
+        <p>Expert, compassionate care built around you.</p>
+        <p>Personal treatment. Clear guidance. Meaningful progress.</p>
 
         <div className="about-values" id="why-choose">
           {values.map((value) => <article key={value.title}><ValueIcon type={value.icon} /><div><h2>{value.title}</h2><p>{value.text}</p></div></article>)}
@@ -48,16 +48,33 @@ export default function AboutPage() {
     </section>
 
     <section className="about-principles" id="mission">
-      <div><p className="section-label">How we care</p><h2>Professional treatment should feel personal.</h2></div>
+      <div><p className="section-label">How we care</p><h2>Professional. Personal. Clear.</h2></div>
       <div className="principle-grid">
-        <article><span>01</span><h3>We listen first</h3><p>Your concerns, daily routine and goals guide the direction of care from the first conversation.</p></article>
-        <article><span>02</span><h3>We explain clearly</h3><p>You should understand what we are working on, why it matters and what progress may look like.</p></article>
-        <article><span>03</span><h3>We progress together</h3><p>Your plan develops with you, building the movement and confidence needed beyond the clinic.</p></article>
+        <article><span>01</span><h3>We listen first</h3><p>Your needs and goals guide care.</p></article>
+        <article><span>02</span><h3>We explain clearly</h3><p>Know what we are doing and why.</p></article>
+        <article><span>03</span><h3>We progress together</h3><p>Build movement and confidence at your pace.</p></article>
+      </div>
+    </section>
+
+    <section className="about-team" aria-labelledby="about-team-heading">
+      <div className="about-team-heading">
+        <p className="section-label">Our team</p>
+        <h2 id="about-team-heading">Meet your therapists.</h2>
+      </div>
+      <div className="about-team-grid">
+        <Link className="about-team-card" href="/therapists">
+          <div className="about-team-image"><Image src="/male-team.jfif" alt="Dr Qadeer at Flex Well" fill sizes="(max-width: 700px) 100vw, 50vw" /></div>
+          <div><h3>Dr Qadeer</h3><p>Physiotherapy &amp; Rehabilitation</p></div>
+        </Link>
+        <Link className="about-team-card" href="/therapists">
+          <div className="about-team-image about-team-image-female"><Image src="/female-team.jfif" alt="Dr Ayesha at Flex Well" fill sizes="(max-width: 700px) 100vw, 50vw" /></div>
+          <div><h3>Dr Ayesha</h3><p>Mobility, Exercise &amp; Wellness Care</p></div>
+        </Link>
       </div>
     </section>
 
     <section className="about-cta">
-      <div><p className="section-label">Visit Flex Well</p><h2>Begin your next chapter with confident movement.</h2><p>Find us on Street 19, J Sector, DHA Phase 2, Islamabad.</p></div>
+      <div><p className="section-label">Visit Flex Well</p><h2>Start moving with confidence.</h2><p>Street 19, J Sector, DHA Phase 2.</p></div>
       <div><Link className="button button-primary" href={getBookingWhatsAppUrl()} target="_blank" rel="noreferrer">Book an appointment <ArrowIcon /></Link><Link className="text-link" href="/therapists">Meet our therapists</Link></div>
     </section>
   </main></PageShell>;

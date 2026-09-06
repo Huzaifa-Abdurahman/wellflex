@@ -1,8 +1,43 @@
+import Image from "next/image";
 import Link from "next/link";
 import { PageShell } from "./components";
+import { ReviewCarousel } from "./review-carousel";
 import { getBookingWhatsAppUrl } from "./site-config";
 
-const googleListingUrl = "https://www.google.com/maps/search/?api=1&query=Flex+Well+Physiotherapy+Clinic+DHA+2+Sector+J+Islamabad";
+const googleListingUrl = "https://www.google.com/maps?cid=14790288780590020570";
+
+const googleReviews = [
+  {
+    name: "Fakhar Zaman",
+    date: "6 months ago",
+    quote: "Flex Well Physiotherapy is very good, especially Dr. Qadeer Muneer, who is very cooperative and kind.",
+  },
+  {
+    name: "Maneela Shurfa",
+    date: "8 months ago",
+    quote: "Very knowledgeable, patient, and really took the time to explain everything. I’m already feeling much better.",
+  },
+  {
+    name: "Farhat Sharaz",
+    date: "8 months ago",
+    quote: "Alhamdulillah because of Dr Qadeers efforts and therapy services he is alhamdulillah able to walk independently for few minutes.",
+  },
+  {
+    name: "Adeel Hussain",
+    date: "10 months ago",
+    quote: "His friendly and encouraging nature helps patients stay motivated during recovery.",
+  },
+  {
+    name: "Mubashir Naveed",
+    date: "A year ago",
+    quote: "He truly cares about his patients and explains everything clearly. One of the best physiotherapists I’ve ever met.",
+  },
+  {
+    name: "Islam Don",
+    date: "A year ago",
+    quote: "Her approach was kind and professional. I'm already feeling better. Highly recommended!",
+  },
+] as const;
 
 const benefits = [
   { title: "Expert care", icon: "care" },
@@ -31,7 +66,7 @@ export default function Home() {
           <h1>FLEX WELL</h1>
           <p className="hero-subtitle">PHYSIOTHERAPY &amp; HIJAMA CENTER</p>
           <p className="hero-tagline">Healing today, stronger tomorrow.</p>
-          <p className="hero-description">Thoughtful, one-to-one care that helps you reduce pain, restore movement, and return to the life you enjoy.</p>
+          <p className="hero-description">One-to-one care for less pain and better movement.</p>
           <div className="hero-actions"><Link className="button button-primary" href={getBookingWhatsAppUrl()} target="_blank" rel="noreferrer">Book an appointment</Link><Link className="button button-light" href="/services">Explore services</Link></div>
           <p className="hero-note">Street 19, J Sector, DHA Phase 2, Islamabad</p>
         </div>
@@ -45,33 +80,39 @@ export default function Home() {
       <Link className="mobile-booking button button-primary" href={getBookingWhatsAppUrl()} target="_blank" rel="noreferrer">Book an appointment</Link>
     </section>
 
-    <section className="care-journey">
-      <div className="care-journey-heading"><p className="section-label">The Flex Well difference</p><h2>Simple care.<br />Meaningful progress.</h2><p>Three clear steps, one plan built around you.</p></div>
-      <div className="care-journey-steps">
-        <article><span>01</span><div><h3>Understand</h3><p>Listen, assess and set your goal.</p></div></article>
-        <article><span>02</span><div><h3>Personalise</h3><p>Shape the right care around you.</p></div></article>
-        <article><span>03</span><div><h3>Progress</h3><p>Build strength and confidence together.</p></div></article>
+    <section className="clinic-story" aria-label="Flex Well clinic and team">
+      <div className="clinic-story-copy">
+        <p className="section-label">Inside Flex Well</p>
+        <h2>Care you can feel confident in.</h2>
+        <p>A welcoming clinic, an experienced team and treatment focused on your goals.</p>
+        <Link className="text-link" href="/about">Discover Flex Well <span aria-hidden="true">→</span></Link>
       </div>
-      <Link className="text-link" href="/about">Discover our approach</Link>
+      <div className="clinic-gallery">
+        <div className="clinic-gallery-image"><Image src="/full satff.jfif" alt="Full Flex Well physiotherapy team" fill sizes="(max-width: 700px) 100vw, 45vw" /></div>
+        <div className="clinic-gallery-image"><Image src="/dr-male.jpeg" alt="Flex Well physiotherapist treating a patient" fill sizes="(max-width: 700px) 50vw, 24vw" /></div>
+        <div className="clinic-gallery-image"><Image src="/staff.jfif" alt="Flex Well clinic staff" fill sizes="(max-width: 700px) 50vw, 24vw" /></div>
+      </div>
     </section>
 
     <section className="reviews-section">
-      <div className="reviews-heading"><div><p className="section-label">Patient reviews</p><h2>Experiences shared<br />by our patients.</h2></div><p>Discover recent patient experiences and the latest clinic rating directly on our Google profile.</p></div>
+      <div className="reviews-heading"><div><p className="section-label">Patient reviews</p><h2>Shared by<br />our patients.</h2></div><p>Recent feedback from our Google profile.</p></div>
       <div className="google-review-panel">
         <div className="google-review-summary">
           <span className="google-mark"><GoogleLogo /></span>
-          <div><p>Google Reviews</p><h3>Patient feedback<br />you can trust.</h3></div>
+          <div><p>Google Reviews</p><h3>5.0 rating<br />from 57 reviews.</h3></div>
         </div>
         <div className="google-review-feature">
           <div className="google-review-stars" aria-label="Five star reviews"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-          <h3>See what people are saying</h3>
-          <p>Read current ratings and patient comments on Google, where every experience is shared in the reviewer&apos;s own words.</p>
+          <h3>Verified on Google</h3>
+          <p>Short excerpts from our public Google profile.</p>
         </div>
         <div className="google-review-actions">
           <Link className="button button-light" href={googleListingUrl} target="_blank" rel="noreferrer">View Google reviews</Link>
           <Link className="text-link" href={googleListingUrl} target="_blank" rel="noreferrer">Leave a Google review <span aria-hidden="true">↗</span></Link>
         </div>
       </div>
+      <ReviewCarousel reviews={googleReviews} />
+      <p className="reviews-source-note">Public Google rating and short verbatim review excerpts checked September 2026. Read the complete reviews on Google.</p>
     </section>
   </main></PageShell>;
 }
