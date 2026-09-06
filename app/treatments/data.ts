@@ -15,7 +15,7 @@ export const treatments: Treatment[] = [
     slug: "neck-pain",
     title: "Neck Pain",
     description: "Focused care for stiffness, strain and discomfort affecting everyday movement.",
-    image: "/neck-pain.jfif",
+    image: "/neck-pain.jpg",
     imageAlt: "Person experiencing discomfort around the neck",
     overview: [
       "Neck pain can make simple tasks—from working at a desk to checking your surroundings—feel tiring or restricted. It may develop gradually through sustained positions and daily habits, or follow a sudden strain, injury or period of reduced activity.",
@@ -34,7 +34,7 @@ export const treatments: Treatment[] = [
     slug: "back-pain",
     title: "Back Pain",
     description: "Personalised support to restore movement, strength and confidence in daily life.",
-    image: "/backpain.jfif",
+    image: "/treatment-back-pain.jpg",
     imageAlt: "Person holding the lower back because of discomfort",
     overview: [
       "Back pain is common, but its effect on each person is different. It can limit lifting, sitting, walking, sleep or exercise and may create understandable worry about causing further harm.",
@@ -53,7 +53,7 @@ export const treatments: Treatment[] = [
     slug: "shoulder-pain",
     title: "Shoulder Pain",
     description: "Restore comfortable reach, lifting strength and confidence in your shoulder.",
-    image: "/shoulder-pain.jfif",
+    image: "/shoulder-pain.jpg",
     imageAlt: "Person experiencing pain around the shoulder",
     overview: [
       "Shoulder pain can affect dressing, sleeping, reaching overhead and lifting even light objects. Symptoms may follow an injury, repeated activity or a gradual change in shoulder strength and mobility.",
@@ -72,7 +72,7 @@ export const treatments: Treatment[] = [
     slug: "knee-pain",
     title: "Knee Pain",
     description: "Practical rehabilitation for walking, stairs, exercise and everyday independence.",
-    image: "/knee-pain.jfif",
+    image: "/knee-pain.jpg",
     imageAlt: "Person supporting a painful knee",
     overview: [
       "Knee pain may affect walking, stairs, prayer positions, squatting or exercise. It can develop after an injury, alongside changes in activity, or gradually over time.",
@@ -91,7 +91,7 @@ export const treatments: Treatment[] = [
     slug: "sports-injuries",
     title: "Sports Injuries",
     description: "Goal-led rehabilitation for a safe, confident return to training and performance.",
-    image: "/sports-injery.jfif",
+    image: "/sports-injury.jpg",
     imageAlt: "Athlete receiving support for a sports injury",
     overview: [
       "A sports injury can interrupt more than training—it can affect routine, confidence and personal goals. Whether symptoms developed suddenly or through repeated load, effective rehabilitation should prepare you for the real demands of your sport.",
@@ -110,7 +110,7 @@ export const treatments: Treatment[] = [
     slug: "sciatica-pain",
     title: "Sciatica Pain",
     description: "Individual care for back-related leg pain, sensitivity and restricted movement.",
-    image: "/scaticia-pain.jfif",
+    image: "/sciatica-pain.jpg",
     imageAlt: "Person experiencing pain travelling from the lower back into the leg",
     overview: [
       "Sciatica describes symptoms associated with irritation or sensitivity of the sciatic nerve, often felt from the lower back or buttock into the leg. Experiences vary and may include pain, tingling, altered sensation or weakness.",
@@ -148,7 +148,7 @@ export const treatments: Treatment[] = [
     slug: "hijama-wellness",
     title: "Hijama Wellness",
     description: "Traditional cupping care provided with thoughtful screening, hygiene and privacy.",
-    image: "/hajjama-male.jfif",
+    image: "/hijama-male.jpg",
     imageAlt: "Hijama cups used during a traditional wellness treatment",
     overview: [
       "Hijama, or wet cupping, is a traditional practice that some people choose as part of their personal wellness routine. At Flex Well Physiotherapy Center, the experience is calm, private and centred on careful hygiene and informed choice.",
@@ -167,7 +167,7 @@ export const treatments: Treatment[] = [
     slug: "frozen-shoulder",
     title: "Frozen Shoulder",
     description: "Stage-aware support for shoulder pain, stiffness and restricted everyday reach.",
-    image: "/frozen-shoulder.jfif",
+    image: "/frozen-shoulder.jpg",
     imageAlt: "Person experiencing restricted and painful shoulder movement",
     overview: [
       "Frozen shoulder can cause substantial pain and a progressive loss of shoulder movement. Dressing, sleeping, reaching overhead and placing a hand behind the back may become particularly difficult.",
