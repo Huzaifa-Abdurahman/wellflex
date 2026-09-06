@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const therapists = [
   {
     name: "Dr Qadeer",
-    image: "/male-team.jfif",
+    image: "/male-team.jpg",
     imageAlt: "Dr Qadeer at Flex Well Physiotherapy Center",
     focus: "Physiotherapy & Rehabilitation",
     introduction: "Dr Qadeer brings a calm, structured approach to helping people understand pain, rebuild movement and return to the activities that matter to them.",
@@ -22,7 +22,7 @@ const therapists = [
   },
   {
     name: "Dr Ayesha",
-    image: "/female-team.jfif",
+    image: "/female-team.jpg",
     imageAlt: "Dr Ayesha at Flex Well Physiotherapy Center",
     focus: "Mobility, Exercise & Wellness Care",
     introduction: "Ayesha supports patients with thoughtful, individual care that makes movement feel approachable, purposeful and relevant to everyday wellbeing.",

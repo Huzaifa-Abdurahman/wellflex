@@ -15,7 +15,7 @@ export const services: Service[] = [
     slug: "physiotherapy",
     title: "Physiotherapy",
     description: "Relieve pain, restore movement and improve your quality of life.",
-    image: "/physciotherapy.jfif",
+    image: "/physciotherapy.jpg",
     imageAlt: "Physiotherapist assessing and treating a patient",
     introduction: [
       "Physiotherapy is a personalised, evidence-informed approach to restoring movement and helping you return to the activities that matter. At Flex Well, treatment begins with listening carefully to your concerns, assessing how your body moves, and understanding the demands of your daily life.",
@@ -34,7 +34,7 @@ export const services: Service[] = [
     slug: "hijama-therapy",
     title: "Hijama Therapy",
     description: "Traditional cupping care delivered with comfort, hygiene and professionalism.",
-    image: "/hajjama.jfif",
+    image: "/hajjama.jpg",
     imageAlt: "Hijama cups arranged for a traditional cupping treatment",
     introduction: [
       "Hijama, also known as wet cupping, is a traditional wellness practice chosen by many people as part of their personal self-care routine. At Flex Well, every session is approached calmly and professionally, with careful attention to privacy, hygiene and your comfort.",
@@ -53,7 +53,7 @@ export const services: Service[] = [
     slug: "pain-management",
     title: "Pain Management",
     description: "Specialised support for persistent pain, recurring symptoms and injuries.",
-    image: "/backpain.jfif",
+    image: "/backpain.jpg",
     imageAlt: "Person experiencing lower back pain",
     introduction: [
       "Pain can affect sleep, work, movement and confidence. Our pain management service looks beyond the painful area to understand the physical, lifestyle and movement factors that may be contributing to your experience.",
@@ -72,7 +72,7 @@ export const services: Service[] = [
     slug: "rehabilitation",
     title: "Rehabilitation",
     description: "Structured post-surgery and injury rehabilitation programmes.",
-    image: "/rehabillation.jfif",
+    image: "/rehabillation.jpg",
     imageAlt: "Physiotherapist supporting a patient during rehabilitation",
     introduction: [
       "Good rehabilitation turns recovery into a clear, progressive process. Whether you are rebuilding after surgery, an injury or a period of reduced mobility, we tailor each stage to your current ability and your clinician's guidance.",
@@ -91,7 +91,7 @@ export const services: Service[] = [
     slug: "manual-therapy",
     title: "Manual Therapy",
     description: "Skilled hands-on techniques that support comfortable, confident movement.",
-    image: "/manual-therapy.jfif",
+    image: "/manual-therapy.jpg",
     imageAlt: "Therapist applying a hands-on manual therapy technique",
     introduction: [
       "Manual therapy uses skilled, hands-on techniques to assess and support the movement of joints and soft tissues. It can be a useful part of treatment when stiffness, sensitivity or restricted movement is limiting your comfort and function.",
@@ -110,7 +110,7 @@ export const services: Service[] = [
     slug: "exercise-therapy",
     title: "Exercise Therapy",
     description: "Personalised exercises for strength, flexibility and lasting progress.",
-    image: "/Exercise Therapy.jfif",
+    image: "/exercise-therapy.jpg",
     imageAlt: "Therapist guiding a patient through a personalised exercise",
     introduction: [
       "Exercise therapy uses carefully selected movement to improve strength, flexibility, balance and physical resilience. Your programme is built around what you need to do—not a generic list of exercises—and is adapted to your starting point.",
@@ -129,7 +129,7 @@ export const services: Service[] = [
     slug: "orthopaedic-physiotherapy",
     title: "Orthopaedic Physiotherapy",
     description: "Assessment and rehabilitation for bone, joint, muscle and tendon concerns.",
-    image: "/manual-therapy.jfif",
+    image: "/manual-therapy.jpg",
     imageAlt: "Physiotherapist assessing a patient's joint movement",
     introduction: [
       "Orthopaedic physiotherapy supports people affected by pain, injury, stiffness or reduced function involving muscles, joints, tendons and ligaments. Care begins with understanding the activities that have become difficult and identifying the physical factors relevant to them.",
@@ -148,7 +148,7 @@ export const services: Service[] = [
     slug: "neurological-physiotherapy",
     title: "Neurological Physiotherapy",
     description: "Goal-led movement and mobility support for neurological conditions.",
-    image: "/rehabillation.jfif",
+    image: "/rehabillation.jpg",
     imageAlt: "Therapist supporting a patient during walking rehabilitation",
     introduction: [
       "Neurological physiotherapy helps people whose movement, balance, strength or coordination has been affected by a condition involving the brain, spinal cord or nerves. Assessment considers the person as a whole, including mobility, transfers, fatigue, confidence and the support available at home.",
@@ -167,7 +167,7 @@ export const services: Service[] = [
     slug: "paediatric-physiotherapy",
     title: "Paediatric Physiotherapy",
     description: "Child-centred movement support developed with families and clinical guidance.",
-    image: "/Exercise Therapy.jfif",
+    image: "/exercise-therapy.jpg",
     imageAlt: "Physiotherapist guiding supported movement practice",
     introduction: [
       "Paediatric physiotherapy supports children whose movement, balance, strength or physical development affects play and everyday participation. Care should be age-appropriate, engaging and developed in partnership with parents or caregivers.",
@@ -186,7 +186,7 @@ export const services: Service[] = [
     slug: "older-adult-physiotherapy",
     title: "Older Adult Physiotherapy",
     description: "Practical support for strength, balance, mobility and everyday independence.",
-    image: "/rehabillation.jfif",
+    image: "/rehabillation.jpg",
     imageAlt: "Older adult practising mobility with a physiotherapist",
     introduction: [
       "Physiotherapy for older adults focuses on the abilities that protect independence: getting up, walking, using stairs, maintaining balance and completing everyday activities with confidence. Plans account for health conditions, medicines, fatigue and the person's usual environment.",
@@ -205,7 +205,7 @@ export const services: Service[] = [
     slug: "post-surgical-physiotherapy",
     title: "Post-Surgical Physiotherapy",
     description: "Rehabilitation aligned with your procedure, precautions and recovery goals.",
-    image: "/post-surgery-pain.jfif",
+    image: "/post-surgery-pain.jpg",
     imageAlt: "Patient receiving physiotherapy support after surgery",
     introduction: [
       "Post-surgical physiotherapy supports movement, strength and independence after an operation. The right pace depends on the procedure, healing stage, surgeon's instructions and your current function.",
@@ -224,7 +224,7 @@ export const services: Service[] = [
     slug: "dry-needling",
     title: "Dry Needling",
     description: "A needle-based technique considered only after assessment and informed consent.",
-    image: "/manual-therapy.jfif",
+    image: "/manual-therapy.jpg",
     imageAlt: "Clinical physiotherapy treatment setting",
     introduction: [
       "Dry needling uses a fine, sterile needle without medication and may be considered for selected muscle-related pain and movement concerns. It is different from acupuncture and should form only one part of a broader rehabilitation plan.",
@@ -243,7 +243,7 @@ export const services: Service[] = [
     slug: "wet-hijama",
     title: "Wet Hijama",
     description: "Traditional wet cupping with screening, consent and careful infection control.",
-    image: "/hajjama-cupping.jfif",
+    image: "/hajjama-cupping.jpg",
     imageAlt: "Cups prepared for a Hijama session",
     introduction: [
       "Wet Hijama is a traditional cupping practice in which suction is combined with controlled superficial skin incisions. Because blood exposure is involved, careful screening, single-use supplies, sharps handling and aftercare are essential.",
@@ -262,7 +262,7 @@ export const services: Service[] = [
     slug: "dry-cupping",
     title: "Dry Cupping",
     description: "Non-incisional cupping offered as an optional complementary wellness practice.",
-    image: "/hajjama.jfif",
+    image: "/hajjama.jpg",
     imageAlt: "Dry cupping equipment in a treatment room",
     introduction: [
       "Dry cupping creates suction on the skin without making incisions. Some people choose it for relaxation or as part of a personal wellness routine, although strong evidence for treating health conditions is limited.",
@@ -281,7 +281,7 @@ export const services: Service[] = [
     slug: "sunnah-hijama",
     title: "Sunnah Hijama",
     description: "Faith-sensitive Hijama care delivered with clinical screening and honest guidance.",
-    image: "/hajjama-cupping.jfif",
+    image: "/hajjama-cupping.jpg",
     imageAlt: "Hijama cups arranged for traditional wellness care",
     introduction: [
       "Many Muslims choose Hijama because of its place in Islamic tradition. We respect that motivation while maintaining the same consultation, consent, hygiene and suitability standards used for every wet-cupping appointment.",

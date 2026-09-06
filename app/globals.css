@@ -82,7 +82,7 @@ svg { display: block; }
 .hero { padding: 48px var(--page-gutter) 72px; }
 .hero-inner { align-items: stretch; background: var(--color-surface); border: 1px solid var(--color-line); border-radius: 28px; box-shadow: 0 24px 70px rgba(19,45,53,.08); display: grid; grid-template-columns: minmax(390px, .88fr) minmax(480px, 1.12fr); margin: 0 auto; max-width: var(--content-width); min-height: 590px; overflow: hidden; }
 .hero-copy { align-self: center; max-width: 570px; padding: 62px 28px 62px clamp(38px, 5vw, 76px); }
-.hero-visual { background: linear-gradient(90deg, rgba(255,255,255,.12), transparent 25%), url("/background.jfif") center 54%/cover no-repeat; min-height: 590px; position: relative; }
+.hero-visual { background: linear-gradient(90deg, rgba(255,255,255,.12), transparent 25%), url("/background.jpg") center 54%/cover no-repeat; min-height: 590px; position: relative; }
 .hero-visual::after { background: linear-gradient(90deg, rgba(255,255,255,.24), transparent 28%); content: ""; inset: 0; pointer-events: none; position: absolute; }
 .eyebrow, .section-label { color: var(--color-teal-dark); font-size: 12px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
 .eyebrow { margin: 0 0 18px; }

@@ -88,9 +88,9 @@ export default function Home() {
         <Link className="text-link" href="/about">Discover Flex Well <span aria-hidden="true">→</span></Link>
       </div>
       <div className="clinic-gallery">
-        <div className="clinic-gallery-image"><Image src="/full satff.jfif" alt="Full Flex Well physiotherapy team" fill sizes="(max-width: 700px) 100vw, 45vw" /></div>
+        <div className="clinic-gallery-image"><Image src="/full-staff.jpg" alt="Full Flex Well physiotherapy team" fill sizes="(max-width: 700px) 100vw, 45vw" /></div>
         <div className="clinic-gallery-image"><Image src="/dr-male.jpeg" alt="Flex Well physiotherapist treating a patient" fill sizes="(max-width: 700px) 50vw, 24vw" /></div>
-        <div className="clinic-gallery-image"><Image src="/staff.jfif" alt="Flex Well clinic staff" fill sizes="(max-width: 700px) 50vw, 24vw" /></div>
+        <div className="clinic-gallery-image"><Image src="/staff.jpg" alt="Flex Well clinic staff" fill sizes="(max-width: 700px) 50vw, 24vw" /></div>
       </div>
     </section>
 

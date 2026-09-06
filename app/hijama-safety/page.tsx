@@ -47,7 +47,7 @@ export default function HijamaSafetyPage() {
 
   return <PageShell><main className="hijama-safety-page">
     <section className="hijama-safety-hero">
-      <div className="hijama-safety-image"><Image src="/hajjama-cupping.jfif" alt="Hijama cups prepared for a wellness treatment" fill priority sizes="(max-width: 800px) 100vw, 50vw" /></div>
+      <div className="hijama-safety-image"><Image src="/hajjama-cupping.jpg" alt="Hijama cups prepared for a wellness treatment" fill priority sizes="(max-width: 800px) 100vw, 50vw" /></div>
       <div className="hijama-safety-copy"><p className="section-label">Hijama safety &amp; hygiene</p><h1>Safety at every stage.</h1><p>Consultation, consent, hygiene and aftercare.</p><div><Link className="button button-primary" href={bookingUrl} target="_blank" rel="noreferrer">Ask about Hijama <ArrowIcon /></Link><Link className="text-link" href="#safety-protocol">View our protocol</Link></div></div>
     </section>
 

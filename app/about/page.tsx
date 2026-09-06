@@ -31,7 +31,7 @@ export default function AboutPage() {
   return <PageShell><main className="about-page">
     <section className="about-hero" id="about-flex-well">
       <div className="about-image">
-        <Image src="/about.jfif" alt="Bright and welcoming Flex Well therapy room" fill priority sizes="(max-width: 800px) 100vw, 55vw" />
+        <Image src="/about.jpg" alt="Bright and welcoming Flex Well therapy room" fill priority sizes="(max-width: 800px) 100vw, 55vw" />
         <span>Our space in DHA Phase 2</span>
       </div>
 
@@ -63,11 +63,11 @@ export default function AboutPage() {
       </div>
       <div className="about-team-grid">
         <Link className="about-team-card" href="/therapists">
-          <div className="about-team-image"><Image src="/male-team.jfif" alt="Dr Qadeer at Flex Well" fill sizes="(max-width: 700px) 100vw, 50vw" /></div>
+          <div className="about-team-image"><Image src="/male-team.jpg" alt="Dr Qadeer at Flex Well" fill sizes="(max-width: 700px) 100vw, 50vw" /></div>
           <div><h3>Dr Qadeer</h3><p>Physiotherapy &amp; Rehabilitation</p></div>
         </Link>
         <Link className="about-team-card" href="/therapists">
-          <div className="about-team-image about-team-image-female"><Image src="/female-team.jfif" alt="Dr Ayesha at Flex Well" fill sizes="(max-width: 700px) 100vw, 50vw" /></div>
+          <div className="about-team-image about-team-image-female"><Image src="/female-team.jpg" alt="Dr Ayesha at Flex Well" fill sizes="(max-width: 700px) 100vw, 50vw" /></div>
           <div><h3>Dr Ayesha</h3><p>Mobility, Exercise &amp; Wellness Care</p></div>
         </Link>
       </div>
