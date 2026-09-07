@@ -31,7 +31,7 @@ export const legalPages: LegalPage[] = [
       { heading: "8. Retention and security", paragraphs: ["The website does not currently retain submitted form entries. Messages received through WhatsApp or email may be retained for as long as reasonably needed to respond, administer appointments, maintain appropriate clinic records, resolve disputes or meet applicable obligations.", "We use reasonable administrative and technical safeguards, but no internet or messaging service can be guaranteed completely secure. Please choose carefully what you send online."] },
       { heading: "9. Your choices", paragraphs: ["You may ask what personal information the clinic holds about you and request correction or deletion where appropriate. Some information may need to be retained for clinical, legal, safety or record-keeping reasons. You may also choose to contact us by telephone instead of using third-party messaging services."] },
       { heading: "10. Children", paragraphs: ["This website is intended for general audiences and does not knowingly invite children to submit enquiries independently. A parent or legal guardian should contact the clinic for a child or young person where appropriate."] },
-      { heading: "11. Changes and contact", paragraphs: ["We may update this policy when the website, clinic practices or applicable requirements change. The current revision date appears above.", "For a privacy question or request, email qadeerkhan3945@gmail.com or call +92 309 7708828."] },
+      { heading: "11. Changes and contact", paragraphs: ["We may update this policy when the website, clinic practices or applicable requirements change. The current revision date appears above.", "For a privacy question or request, email flex.well.physiotherapist@gmail.com or call +92 309 7708828."] },
     ],
   },
   {
@@ -49,7 +49,7 @@ export const legalPages: LegalPage[] = [
       { heading: "7. Intellectual property", paragraphs: ["Unless otherwise stated, the Flex Well Physiotherapy Center name, website copy, layout and original design elements are owned by or licensed to Flex Well Physiotherapy Center. You may view and print pages for personal, non-commercial use, but may not republish or commercially exploit them without written permission."] },
       { heading: "8. Responsibility", paragraphs: ["To the extent permitted by applicable law, Flex Well Physiotherapy Center is not responsible for losses caused solely by reliance on general website information, interruptions outside our reasonable control, or third-party platforms. Nothing in these terms excludes responsibility that cannot lawfully be excluded."] },
       { heading: "9. Governing principles", paragraphs: ["These terms are intended to operate under the applicable laws of Pakistan. Any dispute should first be raised with the clinic in good faith so that a practical resolution can be attempted."] },
-      { heading: "10. Contact", paragraphs: ["Questions about these terms may be sent to qadeerkhan3945@gmail.com or discussed by calling +92 309 7708828."] },
+      { heading: "10. Contact", paragraphs: ["Questions about these terms may be sent to flex.well.physiotherapist@gmail.com or discussed by calling +92 309 7708828."] },
     ],
   },
   {
@@ -80,7 +80,7 @@ export const legalPages: LegalPage[] = [
       { heading: "4. External links", paragraphs: ["Selecting WhatsApp, Instagram, Facebook, email, telephone or Google Maps links takes you to another application or service. Those services may use their own cookies and tracking technologies. Their policies and account settings control that processing."] },
       { heading: "5. Your controls", paragraphs: ["Most browsers allow you to block, delete or limit cookies. Blocking all cookies may affect embedded maps or other functionality. You can also avoid loading the map by not visiting the Contact page and can contact the clinic directly by telephone."] },
       { heading: "6. Future changes", paragraphs: ["If we introduce analytics, advertising or other non-essential cookies, this notice and any required consent controls should be updated before those technologies are enabled."] },
-      { heading: "7. Contact", paragraphs: ["Questions about website technology or this notice may be sent to qadeerkhan3945@gmail.com."] },
+      { heading: "7. Contact", paragraphs: ["Questions about website technology or this notice may be sent to flex.well.physiotherapist@gmail.com."] },
     ],
   },
   {
@@ -92,7 +92,7 @@ export const legalPages: LegalPage[] = [
       { heading: "1. Our commitment", paragraphs: ["We want visitors to be able to find clinic information, understand services and contact us regardless of device, input method or access need. Accessibility is an ongoing responsibility rather than a one-time claim."] },
       { heading: "2. Measures used on this website", items: ["Semantic headings and meaningful page structure.", "Keyboard-accessible navigation, forms and carousel controls.", "Visible focus indicators for interactive elements.", "Text alternatives for meaningful images and accessible labels for controls.", "Responsive layouts, readable contrast and support for reduced-motion preferences."] },
       { heading: "3. Known limitations", paragraphs: ["Third-party experiences such as Google Maps, WhatsApp and social-media sites are outside our direct control. Some uploaded clinical imagery may be decorative and does not provide clinical information. We continue to review content as the website grows."] },
-      { heading: "4. Assistance and feedback", paragraphs: ["If you have difficulty using any part of the website or need information in another reasonable format, call +92 309 7708828 or email qadeerkhan3945@gmail.com. Please tell us which page or feature caused difficulty and what assistance would be useful."] },
+      { heading: "4. Assistance and feedback", paragraphs: ["If you have difficulty using any part of the website or need information in another reasonable format, call +92 309 7708828 or email flex.well.physiotherapist@gmail.com. Please tell us which page or feature caused difficulty and what assistance would be useful."] },
       { heading: "5. Review", paragraphs: ["We will review accessibility when significant features or content are added and will prioritise issues that prevent visitors from obtaining essential clinic or contact information."] },
     ],
   },

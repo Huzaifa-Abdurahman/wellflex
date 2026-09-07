@@ -32,7 +32,7 @@ export default async function LegalPage({ params }: LegalPageProps) {
       <aside className="legal-index">
         <p>On this page</p>
         <nav aria-label={`${page.title} sections`}>{page.sections.map((section, index) => <a href={`#section-${index + 1}`} key={section.heading}>{section.heading.replace(/^\d+\.\s*/, "")}</a>)}</nav>
-        <div><strong>Questions?</strong><a href="mailto:qadeerkhan3945@gmail.com">Email Flex Well Physiotherapy Center</a></div>
+        <div><strong>Questions?</strong><a href="mailto:flex.well.physiotherapist@gmail.com">Email Flex Well Physiotherapy Center</a></div>
       </aside>
 
       <article className="legal-content">
