@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 };
 
 const address = siteConfig.address;
-const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
-const mapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
+const directionsUrl = siteConfig.googleMaps.location;
+const mapEmbedUrl = siteConfig.googleMaps.embed;
 
 function ContactIcon({ type }: { type: "phone" | "whatsapp" | "email" | "location" }) {
   if (type === "phone") return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3H4.5A1.5 1.5 0 0 0 3 4.5C3 13.6 10.4 21 19.5 21a1.5 1.5 0 0 0 1.5-1.5V17l-5-1-1.2 2a15 15 0 0 1-8.8-8.8L8 8 7 3Z" /></svg>;

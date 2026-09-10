@@ -4,6 +4,10 @@ export const siteConfig = {
   whatsapp: "https://wa.me/923097708828",
   email: "flex.well.physiotherapist@gmail.com",
   address: "Street 19, J Sector DHA 2 Islamabad, Islamabad, Pakistan",
+  googleMaps: {
+    location: "https://maps.app.goo.gl/6Ny9CEcrsNRyED5X7?g_st=awb",
+    embed: "https://www.google.com/maps?cid=14790288780590020570&output=embed",
+  },
   social: {
     instagram: "https://www.instagram.com/flex_well_physiotherapy/",
     facebook: "https://www.facebook.com/share/1LMDmiUfau/",

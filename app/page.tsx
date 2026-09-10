@@ -4,7 +4,7 @@ import { PageShell } from "./components";
 import { ReviewCarousel } from "./review-carousel";
 import { getBookingWhatsAppUrl, siteConfig } from "./site-config";
 
-const googleListingUrl = "https://www.google.com/maps?cid=14790288780590020570";
+const googleListingUrl = siteConfig.googleMaps.location;
 
 const googleReviews = [
   {
