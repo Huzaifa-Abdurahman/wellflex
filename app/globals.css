@@ -369,7 +369,8 @@ h1 { font-family: var(--font-display); font-size: clamp(38px, 6vw, 70px); font-w
 .about-team-card:hover { box-shadow: 0 24px 55px rgba(19,45,53,.14); transform: translateY(-5px); }
 .about-team-image { aspect-ratio: 16 / 10; overflow: hidden; position: relative; }
 .about-team-image img { object-fit: cover; object-position: center 32%; transition: transform .45s ease; }
-.about-team-image-female img { object-position: center 24%; }
+.about-team-image-qadeer img { object-position: center 5%; }
+.about-team-image-female img { object-position: center top; }
 .about-team-card:hover .about-team-image img { transform: scale(1.025); }
 .about-team-card > div:last-child { padding: 22px 25px 24px; }
 .about-team-card h3 { font-size: 20px; margin: 0 0 6px; }

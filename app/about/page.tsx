@@ -63,7 +63,7 @@ export default function AboutPage() {
       </div>
       <div className="about-team-grid">
         <Link className="about-team-card" href="/therapists">
-          <div className="about-team-image"><Image src="/dr-qadeer.jpeg" alt="Dr Qadeer Muneer at Flex Well Physiotherapy Center" fill sizes="(max-width: 700px) 100vw, 50vw" /></div>
+          <div className="about-team-image about-team-image-qadeer"><Image src="/dr-qadeer.jpeg" alt="Dr Qadeer Muneer at Flex Well Physiotherapy Center" fill sizes="(max-width: 700px) 100vw, 50vw" /></div>
           <div><h3>Dr Qadeer Muneer</h3><p>Physiotherapy &amp; Rehabilitation</p></div>
         </Link>
         <Link className="about-team-card" href="/therapists">
