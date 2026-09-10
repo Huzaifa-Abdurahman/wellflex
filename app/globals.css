@@ -834,7 +834,7 @@ h1 { font-family: var(--font-display); font-size: clamp(38px, 6vw, 70px); font-w
   .therapist-profile, .therapist-profile:nth-child(even) { display: flex; flex-direction: column; min-height: 0; }
   .therapist-profile:nth-child(even) .therapist-portrait { order: 0; }
   .therapist-profile:nth-child(even) .therapist-copy { order: 1; }
-  .therapist-portrait { min-height: 255px; }
+  .therapist-portrait { aspect-ratio: 3 / 4; min-height: 0; }
   .therapist-portrait span { font-size: 36px; height: 112px; width: 112px; }
   .therapist-portrait small { margin-top: 16px; }
   .therapist-copy { padding: 31px 24px 34px; }
@@ -878,7 +878,7 @@ h1 { font-family: var(--font-display); font-size: clamp(38px, 6vw, 70px); font-w
   .about-team-heading { margin-bottom: 20px; }
   .about-team-heading h2 { font-size: 29px; }
   .about-team-grid { grid-template-columns: 1fr; }
-  .about-team-image { aspect-ratio: 4 / 3; }
+  .about-team-image { aspect-ratio: 3 / 4; }
   .about-cta { align-items: stretch; flex-direction: column; padding: 55px 8px 10px; text-align: center; }
   .about-cta h2 { font-size: 29px; }
   .about-cta > div:last-child { width: 100%; }
