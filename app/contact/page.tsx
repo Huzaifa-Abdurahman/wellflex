@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 
 const address = siteConfig.address;
 const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+const mapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
 
 function ContactIcon({ type }: { type: "phone" | "whatsapp" | "email" | "location" }) {
   if (type === "phone") return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3H4.5A1.5 1.5 0 0 0 3 4.5C3 13.6 10.4 21 19.5 21a1.5 1.5 0 0 0 1.5-1.5V17l-5-1-1.2 2a15 15 0 0 1-8.8-8.8L8 8 7 3Z" /></svg>;
@@ -46,7 +47,7 @@ export default function ContactPage() {
         </div>
         <div className="contact-card">
           <ContactIcon type="location" />
-          <div><p>Visit us</p><h2>{address}</h2><span>DHA Phase II, Islamabad.</span><a href={directionsUrl} target="_blank" rel="noreferrer">Get directions <ArrowIcon /></a></div>
+          <div><p>Visit us</p><h2>{address}</h2><a href={directionsUrl} target="_blank" rel="noreferrer">Get directions <ArrowIcon /></a></div>
         </div>
       </div>
       <div className="contact-socials"><p>Follow Flex Well Physiotherapy Center</p><div><a href={siteConfig.social.instagram} target="_blank" rel="noreferrer">Instagram <ArrowIcon /></a><a href={siteConfig.social.facebook} target="_blank" rel="noreferrer">Facebook <ArrowIcon /></a></div></div></div>
@@ -55,7 +56,7 @@ export default function ContactPage() {
 
     <section className="map-section">
       <div className="map-heading"><div><p className="section-label">Find the clinic</p><h2>Conveniently located in DHA Phase II.</h2></div><Link className="text-link" href={directionsUrl} target="_blank" rel="noreferrer">Open in Google Maps <ArrowIcon /></Link></div>
-      <div className="map-frame"><iframe title="Google map showing Flex Well Physiotherapy Center location in DHA Phase II, Islamabad" src="https://www.google.com/maps?q=Street%2019%2C%20Sector%20J%2C%20DHA%20Phase%20II%2C%20Islamabad%2C%20Pakistan&output=embed" loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade" /></div>
+      <div className="map-frame"><iframe title={`Google map showing Flex Well Physiotherapy Center at ${address}`} src={mapEmbedUrl} loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade" /></div>
     </section>
   </main></PageShell>;
 }

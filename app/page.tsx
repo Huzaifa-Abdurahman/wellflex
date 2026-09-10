@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PageShell } from "./components";
 import { ReviewCarousel } from "./review-carousel";
-import { getBookingWhatsAppUrl } from "./site-config";
+import { getBookingWhatsAppUrl, siteConfig } from "./site-config";
 
 const googleListingUrl = "https://www.google.com/maps?cid=14790288780590020570";
 
@@ -68,7 +68,7 @@ export default function Home() {
           <p className="hero-tagline">Healing today, stronger tomorrow.</p>
           <p className="hero-description">One-to-one care for less pain and better movement.</p>
           <div className="hero-actions"><Link className="button button-primary" href={getBookingWhatsAppUrl()} target="_blank" rel="noreferrer">Book an appointment</Link><Link className="button button-light" href="/services">Explore services</Link></div>
-          <p className="hero-note">Street 19, J Sector, DHA Phase 2, Islamabad</p>
+          <p className="hero-note">{siteConfig.address}</p>
         </div>
         <div className="hero-visual" role="img" aria-label="Physiotherapist providing treatment to a patient" />
       </div>
@@ -82,15 +82,15 @@ export default function Home() {
 
     <section className="clinic-story" aria-label="Flex Well Physiotherapy Center clinic and team">
       <div className="clinic-story-copy">
-        <p className="section-label">Inside Flex Well Physiotherapy Center</p>
+        <p className="section-label">Our space in DHA</p>
         <h2>Care you can feel confident in.</h2>
         <p>A welcoming clinic, an experienced team and treatment focused on your goals.</p>
         <Link className="text-link" href="/about">Discover Flex Well Physiotherapy Center <span aria-hidden="true">→</span></Link>
       </div>
       <div className="clinic-gallery">
-        <div className="clinic-gallery-image"><Image src="/full-staff.jpg" alt="Full Flex Well Physiotherapy Center team" fill sizes="(max-width: 700px) 100vw, 45vw" /></div>
-        <div className="clinic-gallery-image"><Image src="/dr-male.jpeg" alt="Flex Well Physiotherapy Center physiotherapist treating a patient" fill sizes="(max-width: 700px) 50vw, 24vw" /></div>
-        <div className="clinic-gallery-image"><Image src="/staff.jpg" alt="Flex Well Physiotherapy Center clinic staff" fill sizes="(max-width: 700px) 50vw, 24vw" /></div>
+        <div className="clinic-gallery-image"><Image src="/clinic-1.jpeg" alt="Flex Well Physiotherapy Center reception and rehabilitation space" fill sizes="(max-width: 700px) 100vw, 45vw" /></div>
+        <div className="clinic-gallery-image"><Image src="/clinic-2.jpeg" alt="Flex Well Physiotherapy Center clinic entrance and services display" fill sizes="(max-width: 700px) 50vw, 24vw" /></div>
+        <div className="clinic-gallery-image"><Image src="/clinic-3.jpeg" alt="Flex Well Physiotherapy Center treatment rooms and rehabilitation equipment" fill sizes="(max-width: 700px) 50vw, 24vw" /></div>
       </div>
     </section>
 

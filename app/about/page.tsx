@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PageShell } from "../components";
-import { getBookingWhatsAppUrl } from "../site-config";
+import { getBookingWhatsAppUrl, siteConfig } from "../site-config";
 
 export const metadata: Metadata = {
   title: "About Flex Well Physiotherapy Center | Islamabad",
@@ -63,18 +63,18 @@ export default function AboutPage() {
       </div>
       <div className="about-team-grid">
         <Link className="about-team-card" href="/therapists">
-          <div className="about-team-image"><Image src="/male-team.jpg" alt="Dr Qadeer Muneer at Flex Well Physiotherapy Center" fill sizes="(max-width: 700px) 100vw, 50vw" /></div>
+          <div className="about-team-image"><Image src="/dr-qadeer.jpeg" alt="Dr Qadeer Muneer at Flex Well Physiotherapy Center" fill sizes="(max-width: 700px) 100vw, 50vw" /></div>
           <div><h3>Dr Qadeer Muneer</h3><p>Physiotherapy &amp; Rehabilitation</p></div>
         </Link>
         <Link className="about-team-card" href="/therapists">
-          <div className="about-team-image about-team-image-female"><Image src="/female-team.jpg" alt="Dr Ayesha Bashir at Flex Well Physiotherapy Center" fill sizes="(max-width: 700px) 100vw, 50vw" /></div>
+          <div className="about-team-image about-team-image-female"><Image src="/dr-ayesha-munier.jpeg" alt="Dr Ayesha Bashir at Flex Well Physiotherapy Center" fill sizes="(max-width: 700px) 100vw, 50vw" /></div>
           <div><h3>Dr Ayesha Bashir</h3><p>Mobility, Exercise &amp; Wellness Care</p></div>
         </Link>
       </div>
     </section>
 
     <section className="about-cta">
-      <div><p className="section-label">Visit Flex Well Physiotherapy Center</p><h2>Start moving with confidence.</h2><p>Street 19, J Sector, DHA Phase 2.</p></div>
+      <div><p className="section-label">Visit Flex Well Physiotherapy Center</p><h2>Start moving with confidence.</h2><p>{siteConfig.address}</p></div>
       <div><Link className="button button-primary" href={getBookingWhatsAppUrl()} target="_blank" rel="noreferrer">Book an appointment <ArrowIcon /></Link><Link className="text-link" href="/therapists">Meet our therapists</Link></div>
     </section>
   </main></PageShell>;

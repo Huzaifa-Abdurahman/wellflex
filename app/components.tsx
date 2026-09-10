@@ -47,7 +47,7 @@ export function Header() {
   return <>
     <header className="site-header">
       <div className="header-ribbon">
-        <p><LocationIcon /> Street 19, J Sector, DHA Phase 2, Islamabad</p>
+        <p><LocationIcon /> {siteConfig.address}</p>
         <Link href="/women-care">Women&apos;s physiotherapy &amp; Hijama care →</Link>
       </div>
       <div className="topbar">
@@ -84,7 +84,7 @@ export function Header() {
         })}
       </nav>
       <div className="drawer-footer">
-        <p><LocationIcon /> DHA Phase 2, Islamabad</p>
+        <p><LocationIcon /> {siteConfig.address}</p>
         <Link className="button button-primary" href={getBookingWhatsAppUrl()} target="_blank" rel="noreferrer" tabIndex={menuOpen ? 0 : -1} onClick={() => setMenuOpen(false)}>Book an appointment <ArrowIcon /></Link>
       </div>
     </aside>
@@ -130,7 +130,7 @@ export function Footer() {
       <div className="footer-contact">
         <p className="footer-kicker">Start your recovery</p>
         <h2>Ready to move better?</h2>
-        <p>Street 19, J Sector<br />DHA Phase 2, Islamabad</p>
+        <p>{siteConfig.address}</p>
         <div className="footer-contact-links"><a href={siteConfig.phoneHref}>{siteConfig.phoneDisplay}</a><a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a></div>
         <Link className="footer-button" href={getBookingWhatsAppUrl()} target="_blank" rel="noreferrer">Book an appointment <ArrowIcon /></Link>
       </div>

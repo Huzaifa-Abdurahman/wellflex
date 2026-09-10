@@ -3,7 +3,7 @@ export const siteConfig = {
   phoneHref: "tel:+923097708828",
   whatsapp: "https://wa.me/923097708828",
   email: "flex.well.physiotherapist@gmail.com",
-  address: "Street 19, Sector J, DHA Phase II, Islamabad, Pakistan",
+  address: "Street 19, J Sector DHA 2 Islamabad, Islamabad, Pakistan",
   social: {
     instagram: "https://www.instagram.com/flex_well_physiotherapy/",
     facebook: "https://www.facebook.com/share/1LMDmiUfau/",

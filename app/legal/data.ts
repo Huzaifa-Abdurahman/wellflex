@@ -1,3 +1,5 @@
+import { siteConfig } from "../site-config";
+
 export type LegalSection = {
   heading: string;
   paragraphs?: string[];
@@ -21,7 +23,7 @@ export const legalPages: LegalPage[] = [
     label: "Your information",
     summary: "This policy explains what information Flex Well Physiotherapy Center may receive through this website, why we use it, and the choices available to you.",
     sections: [
-      { heading: "1. Who we are", paragraphs: ["Flex Well Physiotherapy Center is a clinic located on Street 19, Sector J, DHA Phase II, Islamabad, Pakistan. In this policy, “Flex Well Physiotherapy Center”, “we”, “our” and “us” refer to the clinic and its authorised team."] },
+      { heading: "1. Who we are", paragraphs: [`Flex Well Physiotherapy Center is a clinic located at ${siteConfig.address}. In this policy, “Flex Well Physiotherapy Center”, “we”, “our” and “us” refer to the clinic and its authorised team.`] },
       { heading: "2. Information you choose to provide", paragraphs: ["You may provide your name, telephone number, email address, preferred appointment time and a brief description of what you would like help with. You may also share information when you call, email, message us on WhatsApp, or communicate through our social-media pages."], items: ["Only share information that is reasonably necessary for your enquiry.", "Do not use the website form for emergencies or highly sensitive medical records.", "If you provide information about another person, you should have their permission to do so."] },
       { heading: "3. How the website enquiry form works", paragraphs: ["The current appointment form prepares a message on your device and opens WhatsApp. The website itself does not save the completed form in a clinic database before WhatsApp opens. Your message is sent only after you review and send it in WhatsApp.", "Messages sent through WhatsApp are handled through WhatsApp and Meta systems under their own privacy terms. Calls and emails are handled by the relevant telephone and email providers."] },
       { heading: "4. Technical and third-party information", paragraphs: ["Our hosting provider may process routine technical information needed to deliver and secure the website, such as an IP address, browser type, requested page, approximate time and error logs. We do not currently use first-party advertising or analytics cookies.", "The embedded Google Map may allow Google to process device, browser, location or cookie information when the map loads. Social-media links take you to external services only when selected."] },
