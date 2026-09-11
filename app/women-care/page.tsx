@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 
 const careOptions = [
   { title: "Female physiotherapy", text: "Assessment, pain care, rehabilitation and guided exercise with a female practitioner." },
-  { title: "Female Hijama care", text: "Traditional wellness care with consultation, screening, privacy and careful hygiene." },
   { title: "Post-surgery rehabilitation", text: "Stage-appropriate support for mobility, strength and everyday independence." },
   { title: "Home physiotherapy", text: "Ask about home visits when pain, health or mobility makes clinic travel difficult." },
 ];

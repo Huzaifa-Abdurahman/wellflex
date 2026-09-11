@@ -39,7 +39,7 @@ export default function ContactPage() {
         </div>
         <div className="contact-card">
           <ContactIcon type="phone" />
-          <div><p>Call the clinic</p><h2>{siteConfig.phoneDisplay}</h2><span>Speak directly with our team.</span><a href={siteConfig.phoneHref}>Call now <ArrowIcon /></a></div>
+          <div><p>Call the clinic</p><h2>{siteConfig.phoneDisplay}</h2><span>Consult directly with our team.</span><a href={siteConfig.phoneHref}>Call now <ArrowIcon /></a></div>
         </div>
         <div className="contact-card">
           <ContactIcon type="email" />

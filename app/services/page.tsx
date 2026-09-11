@@ -3,7 +3,7 @@ import Link from "next/link";
 import { PageShell } from "../components";
 import { services } from "./data";
 
-const hijamaServiceSlugs = new Set(["hijama-therapy", "wet-hijama", "dry-cupping", "sunnah-hijama"]);
+const hijamaServiceSlugs = new Set(["hijama-therapy"]);
 const serviceGroups = [
   { label: "Physiotherapy & rehabilitation", title: "Movement care for every stage of life.", items: services.filter((service) => !hijamaServiceSlugs.has(service.slug)) },
   { label: "Hijama & cupping", title: "Traditional wellness care, clearly explained.", items: services.filter((service) => hijamaServiceSlugs.has(service.slug)) },

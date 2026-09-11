@@ -99,7 +99,7 @@ export function Footer() {
           <span className="brand-logo"><Image src="/logo.jpg" alt="" width={64} height={64} /></span>
           <span className="brand-name">Flex Well<small>Physiotherapy Center</small></span>
         </Link>
-        <p>Helping Islamabad move with less pain and more confidence.</p>
+        <p>Helping people move with less pain and more confidence.</p>
         <div className="footer-socials">
           <a href={siteConfig.social.instagram} target="_blank" rel="noreferrer" aria-label="Flex Well Physiotherapy Center on Instagram">Instagram</a>
           <a href={siteConfig.social.facebook} target="_blank" rel="noreferrer" aria-label="Flex Well Physiotherapy Center on Facebook">Facebook</a>

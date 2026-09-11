@@ -43,8 +43,6 @@ export default async function TreatmentDetailPage({ params }: TreatmentPageProps
       <div className="service-detail-image"><Image src={treatment.image} alt={treatment.imageAlt} fill priority sizes="(max-width: 800px) 100vw, 52vw" /></div>
     </section>
 
-    {treatment.slug === "hijama-wellness" && <aside className="hijama-safety-link"><div><span>Safety first</span><h2>Read our Hijama Safety &amp; Hygiene Protocol</h2><p>Learn how consultation, screening, single-use supplies, hygiene and aftercare shape a responsible treatment experience.</p></div><Link className="button button-light" href="/hijama-safety">View safety protocol <ArrowIcon /></Link></aside>}
-
     <section className="service-overview service-overview-compact">
       <aside className="service-facts">
         <div><h2>Common experiences</h2><ul>{treatment.commonSigns.slice(0, 3).map((item) => <li key={item}><CheckIcon />{item}</li>)}</ul></div>
