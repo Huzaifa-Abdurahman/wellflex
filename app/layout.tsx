@@ -8,7 +8,21 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
+const deploymentHost =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  process.env.VERCEL_PROJECT_PRODUCTION_URL ??
+  process.env.VERCEL_URL;
+
+const metadataBase = new URL(
+  deploymentHost
+    ? deploymentHost.startsWith("http")
+      ? deploymentHost
+      : `https://${deploymentHost}`
+    : "http://localhost:3000",
+);
+
 export const metadata: Metadata = {
+  metadataBase,
   title: "Flex Well Physiotherapy Center",
   description: "Helping you heal, move, and thrive in DHA 2, Islamabad.",
   manifest: "/manifest.webmanifest",

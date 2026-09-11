@@ -148,7 +148,7 @@ export const treatments: Treatment[] = [
     slug: "hip-pain",
     title: "Hip Pain",
     description: "Personalised care to ease hip discomfort and restore confident movement.",
-    image: "/hip-pain.jfif",
+    image: "/hip-pain.jpg",
     imageAlt: "Person experiencing discomfort around the hip",
     overview: [
       "Hip pain can affect walking, sitting, climbing stairs, sleeping and exercise. It may develop after an injury, from overuse or alongside changes in strength and mobility.",
