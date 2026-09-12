@@ -1,4 +1,6 @@
 export const siteConfig = {
+  url: "https://flexwellphysiocenter.com",
+  name: "Flex Well Physiotherapy Center",
   phoneDisplay: "+92 309 7708828",
   phoneHref: "tel:+923097708828",
   whatsapp: "https://wa.me/923097708828",

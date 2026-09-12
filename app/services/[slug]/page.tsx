@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageShell } from "../../components";
 import { getBookingWhatsAppUrl } from "../../site-config";
+import { createBreadcrumbJsonLd, createPageMetadata, createServiceJsonLd, safeJsonLd } from "../../seo";
 import { getService, services } from "../data";
 
 type ServicePageProps = { params: Promise<{ slug: string }> };
@@ -15,10 +16,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
   const service = getService((await params).slug);
   if (!service) return {};
-  return {
+  return createPageMetadata({
     title: `${service.title} in Islamabad | Flex Well Physiotherapy Center`,
-    description: service.description,
-  };
+    description: `${service.description} Individual care in DHA Phase 2, Islamabad.`,
+    path: `/services/${service.slug}`,
+  });
 }
 
 function ArrowIcon() {
@@ -33,8 +35,19 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
   const service = getService((await params).slug);
   if (!service) notFound();
   const related = services.filter((item) => item.slug !== service.slug).slice(0, 3);
+  const path = `/services/${service.slug}`;
+  const structuredData = [
+    createBreadcrumbJsonLd([
+      { name: "Home", path: "/" },
+      { name: "Services", path: "/services" },
+      { name: service.title, path },
+    ]),
+    createServiceJsonLd({ name: service.title, description: service.description, path, image: service.image }),
+  ];
 
-  return <PageShell><main className="service-detail">
+  return <PageShell>
+    {structuredData.map((data, index) => <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(data) }} />)}
+    <main className="service-detail">
     <div className="service-breadcrumb"><Link href="/services">Our services</Link><span>/</span><span>{service.title}</span></div>
 
     <section className="service-detail-hero">

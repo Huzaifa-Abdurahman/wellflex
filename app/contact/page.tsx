@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageShell } from "../components";
+import { createPageMetadata } from "../seo";
 import { siteConfig } from "../site-config";
 import { ContactForm } from "./contact-form";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Contact & Appointments | Flex Well Physiotherapy Center Islamabad",
   description: "Call, WhatsApp or send an appointment enquiry to Flex Well Physiotherapy Center in DHA Phase 2, Islamabad.",
-};
+  path: "/contact",
+});
 
 const address = siteConfig.address;
 const directionsUrl = siteConfig.googleMaps.location;

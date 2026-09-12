@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PageShell } from "../components";
 import { treatments } from "./data";
+import { createPageMetadata } from "../seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Pain & Injury Physiotherapy Treatments in Islamabad",
+  description: "Explore physiotherapy for back, neck, shoulder, knee and hip pain, sciatica, sports injuries and post-surgery recovery in Islamabad.",
+  path: "/treatments",
+});
 
 function ArrowIcon() {
   return <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4" /></svg>;

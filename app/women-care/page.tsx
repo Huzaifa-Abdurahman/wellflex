@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PageShell } from "../components";
+import { createPageMetadata } from "../seo";
 import { getBookingWhatsAppUrl } from "../site-config";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Female Physiotherapist & Hijama Care in Islamabad | Flex Well Physiotherapy Center",
   description: "Ask about private female physiotherapy and female Hijama appointments at Flex Well Physiotherapy Center in DHA Phase 2, Islamabad.",
-};
+  path: "/women-care",
+});
 
 const careOptions = [
   { title: "Female physiotherapy", text: "Assessment, pain care, rehabilitation and guided exercise with a female practitioner." },

@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageShell } from "../components";
+import { createPageMetadata } from "../seo";
 import { getBookingWhatsAppUrl } from "../site-config";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Sunnah Hijama Dates | Flex Well Physiotherapy Center Islamabad",
   description: "Understand commonly preferred lunar dates for Sunnah Hijama and arrange a screened appointment at Flex Well Physiotherapy Center Islamabad.",
-};
+  path: "/hijama-sunnah-dates",
+});
 
 function ArrowIcon() {
   return <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4" /></svg>;

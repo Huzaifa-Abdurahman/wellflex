@@ -1,8 +1,15 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PageShell } from "./components";
 import { ReviewCarousel } from "./review-carousel";
 import { getBookingWhatsAppUrl, siteConfig } from "./site-config";
+import { createPageMetadata, defaultDescription } from "./seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Physiotherapy Center in DHA 2 Islamabad | Flex Well",
+  description: defaultDescription,
+});
 
 const googleListingUrl = siteConfig.googleMaps.location;
 

@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PageShell } from "../components";
+import { createPageMetadata } from "../seo";
 import { getBookingWhatsAppUrl } from "../site-config";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Our Therapists | Flex Well Physiotherapy Center Islamabad",
   description: "Meet Dr Qadeer Muneer and Dr Ayesha Bashir, the patient-focused therapy team at Flex Well Physiotherapy Center in Islamabad.",
-};
+  path: "/therapists",
+});
 
 const therapists = [
   {

@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PageShell } from "../components";
+import { createPageMetadata } from "../seo";
 import { getBookingWhatsAppUrl, siteConfig } from "../site-config";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "About Flex Well Physiotherapy Center | Islamabad",
   description: "Learn about Flex Well Physiotherapy Center's patient-centred approach to physiotherapy, rehabilitation and Hijama wellness care in DHA Phase 2, Islamabad.",
-};
+  path: "/about",
+});
 
 const values = [
   { title: "Experienced therapists", text: "Thoughtful care guided by clinical reasoning.", icon: "experience" },

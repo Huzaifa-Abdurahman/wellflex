@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PageShell } from "../components";
 import { services } from "./data";
+import { createPageMetadata } from "../seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Physiotherapy & Rehabilitation Services in Islamabad",
+  description: "Explore physiotherapy, rehabilitation, pain management, dry needling and Hijama services at Flex Well in DHA Phase 2, Islamabad.",
+  path: "/services",
+});
 
 const hijamaServiceSlugs = new Set(["hijama-therapy"]);
 const serviceGroups = [

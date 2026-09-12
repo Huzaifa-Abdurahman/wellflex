@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageShell } from "../../components";
+import { createPageMetadata } from "../../seo";
 import { getLegalPage, lastUpdated, legalPages } from "../data";
 
 type LegalPageProps = { params: Promise<{ slug: string }> };
@@ -13,7 +14,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: LegalPageProps): Promise<Metadata> {
   const page = getLegalPage((await params).slug);
   if (!page) return {};
-  return { title: `${page.title} | Flex Well Physiotherapy Center`, description: page.summary };
+  return createPageMetadata({
+    title: `${page.title} | Flex Well Physiotherapy Center`,
+    description: page.summary,
+    path: `/legal/${page.slug}`,
+  });
 }
 
 export default async function LegalPage({ params }: LegalPageProps) {

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageShell } from "../../components";
 import { getBookingWhatsAppUrl } from "../../site-config";
+import { createBreadcrumbJsonLd, createPageMetadata, createServiceJsonLd, safeJsonLd } from "../../seo";
 import { getTreatment, treatments } from "../data";
 
 type TreatmentPageProps = { params: Promise<{ slug: string }> };
@@ -15,7 +16,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: TreatmentPageProps): Promise<Metadata> {
   const treatment = getTreatment((await params).slug);
   if (!treatment) return {};
-  return { title: `${treatment.title} Treatment in Islamabad | Flex Well Physiotherapy Center`, description: treatment.description };
+  return createPageMetadata({
+    title: `${treatment.title} Physiotherapy in Islamabad | Flex Well`,
+    description: `${treatment.description} Book an individual physiotherapy assessment in DHA Phase 2, Islamabad.`,
+    path: `/treatments/${treatment.slug}`,
+  });
 }
 
 function ArrowIcon() {
@@ -30,8 +35,24 @@ export default async function TreatmentDetailPage({ params }: TreatmentPageProps
   const treatment = getTreatment((await params).slug);
   if (!treatment) notFound();
   const related = treatments.filter((item) => item.slug !== treatment.slug).slice(0, 3);
+  const path = `/treatments/${treatment.slug}`;
+  const structuredData = [
+    createBreadcrumbJsonLd([
+      { name: "Home", path: "/" },
+      { name: "Treatments", path: "/treatments" },
+      { name: treatment.title, path },
+    ]),
+    createServiceJsonLd({
+      name: `${treatment.title} physiotherapy`,
+      description: treatment.description,
+      path,
+      image: treatment.image,
+    }),
+  ];
 
-  return <PageShell><main className="service-detail">
+  return <PageShell>
+    {structuredData.map((data, index) => <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(data) }} />)}
+    <main className="service-detail">
     <div className="service-breadcrumb"><Link href="/treatments">Treatments</Link><span>/</span><span>{treatment.title}</span></div>
     <section className="service-detail-hero">
       <div className="service-detail-copy">

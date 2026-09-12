@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PageShell } from "../components";
+import { createPageMetadata } from "../seo";
 import { getBookingWhatsAppUrl } from "../site-config";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Hijama Safety & Hygiene Protocol | Flex Well Physiotherapy Center Islamabad",
   description: "Learn about Flex Well Physiotherapy Center's consultation, screening, single-use equipment, hygiene, sharps disposal and aftercare approach for Hijama therapy.",
-};
+  path: "/hijama-safety",
+});
 
 const protocol = [
   { title: "Patient consultation", text: "We discuss what you are seeking from Hijama, explain the procedure and give you time to ask questions before deciding." },
