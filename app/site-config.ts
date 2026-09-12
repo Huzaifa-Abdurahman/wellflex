@@ -1,5 +1,5 @@
 export const siteConfig = {
-  url: "https://flexwellphysiocenter.com",
+  url: "https://www.flexwellphysiocenter.com",
   name: "Flex Well Physiotherapy Center",
   phoneDisplay: "+92 309 7708828",
   phoneHref: "tel:+923097708828",
